@@ -4,7 +4,7 @@ title: syllabus
 ---
 
 
-# Introduction to Programming for Biologists with R
+# R programming for biologists
 
 > Course number: BOT6935/ZOO6927
 >
@@ -87,7 +87,7 @@ dates, regular expressions, etc.)
 
 date        | Topic       | Other projects
 ------------|-------------|-----------------
-January 9?   | Software installation, organization of the class, how to use Github |
+January 9?  | Software installation, organization of the class, how to use Github |
 January 16  | Lecture: Version control + Introduction to programming in R |
 January 23  | Open Lab    | Project pitches 1
 January 30  | Open Lab    | Project pitches 2

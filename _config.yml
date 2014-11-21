@@ -10,7 +10,7 @@ relative_permalinks: true
 
 # Setup
 title:               The R class
-tagline:             'An introduction to programming using R'
+tagline:             'R programming for biologists'
 description:         'A course to learn how to develop reproducible and collaborative workflows using R.'
 url:                 http://r-bio.github.io
 baseurl:             /

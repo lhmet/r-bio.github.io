@@ -3,9 +3,6 @@ layout: page
 title: syllabus
 ---
 
-
-# R programming for biologists
-
 > Course number: BOT6935/ZOO6927
 >
 > 2-credit hours

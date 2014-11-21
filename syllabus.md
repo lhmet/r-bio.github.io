@@ -18,7 +18,7 @@ title: syllabus
 **Office hours:** By appointment only
 
 **Website:**
-  [http://fmichonneau.github.io/intro-programming](http://fmichonneau.github.io/intro-programming)
+  [http://r-bio.github.io/](http://r-bio.github.io)
 
 **Course communication:** All communications for this course will take place on
   Github.

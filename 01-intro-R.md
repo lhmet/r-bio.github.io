@@ -1,9 +1,22 @@
 ---
 layout: page
-title: First lecture
+title: 01 -- First lecture
+time: 2.5 hours
 ---
 
+# Preambule
 
+This first lecture is divided in 3 parts.
+
+First, we will review the motivations of why learning R?
+
+Second, we will go through a first session with R to get used to the syntax and
+learn how to generate a simple plot.
+
+Third, we will explore vectors as they are at the heart on how objects are
+stored in R's memory.
+
+------
 
 # Motivation - Why learn R?
 
@@ -236,7 +249,7 @@ dev.off()
 
 ------
 
-# Vectors and Data types
+# Vectors
 
 Vectors are at the heart of how data are stored into R's memory. Almost
 everything in R is stored as a vector. When we typed `x <- 10` we created a
@@ -319,6 +332,17 @@ order)?
 
 ---
 
+### How to update/replace the value of a vector?
+
+```r
+x[4] <- 22
+```
+
+```r
+fav_colors["Sarah"] <- "turquoise"
+```
+
+
 ### How to add elements to a vector?
 
 ```r
@@ -337,8 +361,23 @@ fav_colors <- c(fav_colors, "Tracy" = "purple")
 ```
 
 Notes:
-- here is the case where using the `=` is OK/needed
-- pay attention to where the quotes are
+
+* here is the case where using the `=` is OK/needed
+* pay attention to where the quotes are
+
+---
+
+### Challenge
+
+* If we add another element to our vector:
+
+```r
+fav_color <- c(fav_colors, "black")
+```
+
+how to use the function `names()` to assign the name "Ana" to this last element?
+
+---
 
 
 ### How to remove elements from a vector?
@@ -358,15 +397,6 @@ fav_colors[-match("Tracy", names(fav_colors))]
 The function `match()` looks for the position of the **first exact match**
 within another vector.
 
-### How to update the value of a vector?
-
-```r
-x[4] <- 22
-```
-
-```r
-fav_colors["Sarah"] <- "turquoise"
-```
 
 ### Sequences
 

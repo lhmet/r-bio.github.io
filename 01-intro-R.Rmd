@@ -3,7 +3,19 @@ layout: page
 title: First lecture
 ---
 
+# Preambule
 
+This first lecture is divided in 3 parts.
+
+First, we will review the motivations of why learning R?
+
+Second, we will go through a first session with R to get used to the syntax and
+learn how to generate a simple plot.
+
+Third, we will explore vectors as they are at the heart on how objects are
+stored in R's memory.
+
+------
 
 # Motivation - Why learn R?
 

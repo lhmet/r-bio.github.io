@@ -11,7 +11,7 @@ Florida. You can contact me at francois.michonneau @ gmail.com.
 
 The lectures are available and released under a Creative Commons 0
 license. Their content is inspired/uses parts of
-[Software Carpentry](https://software-carpentry.org),
+[Software Carpentry](http://software-carpentry.org),
 [Data Carpentry](http://datacarpentry.org) material, and plenty of original.
 
 The code for the lecture is on

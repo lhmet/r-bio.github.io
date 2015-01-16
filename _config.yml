@@ -11,6 +11,8 @@ redcarpet:
 permalink:           pretty
 relative_permalinks: true
 
+exclude:      ["*.Rmd"]
+
 # Setup
 title:               The R class
 tagline:             'R programming for biologists'

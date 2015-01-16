@@ -1,3 +1,9 @@
+---
+layout: page
+title: First lecture
+---
+
+
 
 # Motivation - Why learn R?
 
@@ -208,6 +214,7 @@ hist(Nile)
 ```
 
 ---
+
 ### Challenge
 
 The following: `abline(v=100, col="red")` would draw a vertical line on an
@@ -215,6 +222,7 @@ existing plot at the value 100 colored in red.
 
 How would you add such a line to our histogram to show where the mean falls in
 this distribution?
+
 ---
 
 We can now save this plot in its own file:
@@ -226,7 +234,9 @@ abline(v=mean(Nile), col="red")
 dev.off()
 ```
 
-## Vectors and Data types
+------
+
+# Vectors and Data types
 
 Vectors are at the heart of how data are stored into R's memory. Almost
 everything in R is stored as a vector. When we typed `x <- 10` we created a
@@ -300,11 +310,13 @@ fav_colors["John"]
 ```
 
 ---
+
 ### Challenges
 
 * How to access the content of the vector for "Lucy", "Sarah" and "John" (in this
 order)?
 * How to get the name of the second person?
+
 ---
 
 ### How to add elements to a vector?

@@ -1,6 +1,7 @@
 ---
 layout: page
-title: First lecture
+title: 01 -- First lecture
+time: 2.5 hours
 ---
 
 # Preambule

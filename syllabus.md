@@ -1,6 +1,6 @@
 ---
 layout: page
-title: syllabus
+title: Syllabus
 ---
 
 > Course number: BOT6935/ZOO6927

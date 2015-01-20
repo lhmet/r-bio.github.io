@@ -1,6 +1,6 @@
 ---
 layout: page
-Title: Seeking Help
+title: Seeking Help
 ---
 
 ## Seeking help

@@ -1,3 +1,8 @@
+---
+layout: page
+Title: Seeking Help
+---
+
 ## Seeking help
 
 ### I know the name of the function I want to use, but I'm not sure how to use it

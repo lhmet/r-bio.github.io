@@ -241,11 +241,7 @@ between the 2 letter code and the names are in the file `species.csv`. In this
 file, one column includes the genus and another includes the species. First, we
 are going to import this file in memory:
 
-```{r, echo=FALSE, purl=FALSE}
-species <- read.csv("../../data/biology/species.csv")
-```
-
-```{r, eval=FALSE, purl=TRUE}
+```{r, purl=TRUE}
 species <- read.csv("data/species.csv")
 ```
 

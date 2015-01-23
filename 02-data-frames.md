@@ -322,18 +322,17 @@ file, one column includes the genus and another includes the species. First, we
 are going to import this file in memory:
 
 
+```r
+species <- read.csv("data/species.csv")
 ```
-## Warning in file(file, "rt"): cannot open file
-## '../../data/biology/species.csv': No such file or directory
+
+```
+## Warning in file(file, "rt"): cannot open file 'data/species.csv': No such
+## file or directory
 ```
 
 ```
 ## Error in file(file, "rt"): cannot open the connection
-```
-
-
-```r
-species <- read.csv("data/species.csv")
 ```
 
 We are then going to use the function `match()` to create a vector that contains

@@ -326,15 +326,6 @@ are going to import this file in memory:
 species <- read.csv("data/species.csv")
 ```
 
-```
-## Warning in file(file, "rt"): cannot open file 'data/species.csv': No such
-## file or directory
-```
-
-```
-## Error in file(file, "rt"): cannot open the connection
-```
-
 We are then going to use the function `match()` to create a vector that contains
 the genus names for all our observations. The function `match()` takes at least
 2 arguments: the values to be matched (in our case the 2 letter code from the
@@ -346,18 +337,7 @@ of the matches in the table, and this can be used to retrieve the genus names:
 
 ```r
 surveys_spid_index <- match(surveys$species, species$species_id)
-```
-
-```
-## Error in match(surveys$species, species$species_id): object 'species' not found
-```
-
-```r
 surveys_genera <- species$genus[surveys_spid_index]
-```
-
-```
-## Error in eval(expr, envir, enclos): object 'species' not found
 ```
 
 Now that we have our vector of genus names, we can add it as a new column to our
@@ -366,10 +346,6 @@ Now that we have our vector of genus names, we can add it as a new column to our
 
 ```r
 surveys <- cbind(surveys, genus=surveys_genera)
-```
-
-```
-## Error in cbind(surveys, genus = surveys_genera): object 'surveys_genera' not found
 ```
 
 ### Challenge
@@ -381,13 +357,6 @@ frame.
 
 
 
-```
-## Error in eval(expr, envir, enclos): object 'species' not found
-```
-
-```
-## Error in cbind(surveys, species_name = surveys_species): object 'surveys_species' not found
-```
 
 
 ```r
@@ -396,13 +365,13 @@ head(surveys)
 ```
 
 ```
-##   record_id month day year plot species sex wgt
-## 1         1     7  16 1977    2      NL   M  NA
-## 2         2     7  16 1977    3      NL   M  NA
-## 3         3     7  16 1977    2      DM   F  NA
-## 4         4     7  16 1977    7      DM   M  NA
-## 5         5     7  16 1977    3      DM   M  NA
-## 6         6     7  16 1977    1      PF   M  NA
+##   record_id month day year plot species sex wgt       genus species_name
+## 1         1     7  16 1977    2      NL   M  NA     Neotoma     albigula
+## 2         2     7  16 1977    3      NL   M  NA     Neotoma     albigula
+## 3         3     7  16 1977    2      DM   F  NA   Dipodomys     merriami
+## 4         4     7  16 1977    7      DM   M  NA   Dipodomys     merriami
+## 5         5     7  16 1977    3      DM   M  NA   Dipodomys     merriami
+## 6         6     7  16 1977    1      PF   M  NA Perognathus       flavus
 ```
 
 <!--- should we cover merge()? --->
@@ -457,8 +426,9 @@ colnames(surveys)
 ```
 
 ```
-## [1] "record_id" "month"     "day"       "year"      "plot"      "species"  
-## [7] "sex"       "wgt"
+##  [1] "record_id"    "month"        "day"          "year"        
+##  [5] "plot"         "species"      "sex"          "wgt"         
+##  [9] "genus"        "species_name"
 ```
 
 ```r
@@ -466,7 +436,8 @@ colnames(surveys_noDate)
 ```
 
 ```
-## [1] "record_id" "plot"      "species"   "sex"       "wgt"
+## [1] "record_id"    "plot"         "species"      "sex"         
+## [5] "wgt"          "genus"        "species_name"
 ```
 
 The easiest way to remove by name is to use the `subset()` function. This time
@@ -481,7 +452,8 @@ colnames(surveys_noDate2)
 ```
 
 ```
-## [1] "record_id" "plot"      "species"   "sex"       "wgt"
+## [1] "record_id"    "plot"         "species"      "sex"         
+## [5] "wgt"          "genus"        "species_name"
 ```
 
 # Removing rows

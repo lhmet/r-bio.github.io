@@ -5,7 +5,11 @@ time: 2 hours 20 min
 ---
 
 ```{r}
+<<<<<<< HEAD
 opts_chunk$set(fig.path="../figure/")
+=======
+opts_chunk$set(fig.path="../figure")
+>>>>>>> 36f2a749b3a2126cf6c030fc19d313fd2da30101
 ```
 
 # Coercion

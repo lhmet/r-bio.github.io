@@ -6,7 +6,11 @@ time: 2 hours 20 min
 
 
 ```r
+<<<<<<< HEAD
 opts_chunk$set(fig.path="../figure/")
+=======
+opts_chunk$set(fig.path="../figure")
+>>>>>>> 36f2a749b3a2126cf6c030fc19d313fd2da30101
 ```
 
 # Coercion
@@ -505,4 +509,8 @@ table(exprmt)
 barplot(table(exprmt))
 ```
 
+<<<<<<< HEAD
 ![plot of chunk unnamed-chunk-20](../figure/unnamed-chunk-20-1.png) 
+=======
+![plot of chunk unnamed-chunk-20](../figureunnamed-chunk-20-1.png) 
+>>>>>>> 36f2a749b3a2126cf6c030fc19d313fd2da30101

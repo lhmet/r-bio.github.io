@@ -5,9 +5,6 @@ time: 2 hours 20 min
 ---
 
 
-```r
-opts_chunk$set(fig.path="../figure/")
-```
 
 # Coercion
 
@@ -251,10 +248,12 @@ return `"second"`?
 ### Answer
 
 Possible answers:
+
+```
 names(x$numbers)[2]
 names(x$numbers[2])
 names(x[[1]][2])
-
+```
 
 # Presentation of the Survey Data
 
@@ -505,4 +504,4 @@ table(exprmt)
 barplot(table(exprmt))
 ```
 
-![plot of chunk unnamed-chunk-20](../figure/unnamed-chunk-20-1.png) 
+![plot of chunk unnamed-chunk-20](../figure/02-unnamed-chunk-20-1.png) 

@@ -4,8 +4,8 @@ title: 02 -- coercion, lists, factors, and a little bit of `data.frame`
 time: 2 hours 20 min
 ---
 
-```{r}
-opts_chunk$set(fig.path="../figure/")
+```{r, echo=FALSE}
+opts_chunk$set(fig.path="../figure/02-")
 ```
 
 # Coercion
@@ -111,10 +111,12 @@ return `"second"`?
 ### Answer
 
 Possible answers:
+
+```
 names(x$numbers)[2]
 names(x$numbers[2])
 names(x[[1]][2])
-
+```
 
 # Presentation of the Survey Data
 

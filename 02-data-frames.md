@@ -1,13 +1,257 @@
 ---
 layout: page
-title: 02 -- `data.frame` and other data structures
-time: 2 hours
+title: 02 -- coercion, lists, factors, and a little bit of `data.frame`
+time: 2 hours 20 min
 ---
+
+# Coercion
+
+Last week, we covered vectors. Vectors are data structures that R uses to store
+information. We spent some time covering how vectors have classes associated
+with them. What happens if we try to create a vector that contains elements of
+different classes?
+
+
+```r
+x <- c(123, "cats", TRUE)
+class(x)
+```
+
+```
+## [1] "character"
+```
+
+What happened here? Vectors can only have 1 class associated with them,
+therefore R has to make decisions to convert (= coerce) the content of this
+vector to find a "common denominator". To figure out the rules R uses let's
+explore some options:
+
+
+```r
+class(c(TRUE, 1))
+```
+
+```
+## [1] "numeric"
+```
+
+```r
+class(c(TRUE, "cats"))
+```
+
+```
+## [1] "character"
+```
+
+```r
+class(c(1, "cats"))
+```
+
+```
+## [1] "character"
+```
+
+```
+logical --> numeric --> character <-- logical
+```
+
+These conversions between formats can even be used to do maths:
+
+
+```r
+1 + TRUE  # TRUE == 1
+```
+
+```
+## [1] 2
+```
+
+```r
+1 + FALSE # FALSE == 0
+```
+
+```
+## [1] 1
+```
+
+and vectors of logicals can be used with functions normally used with numbers:
+
+
+```r
+## Gives the number of elements that are TRUE
+sum(c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE))
+```
+
+```
+## [1] 4
+```
+
+```r
+## Gives the proportion of elements that are TRUE
+mean(c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE))
+```
+
+```
+## [1] 0.6666667
+```
+
+These properties are really useful in conjunction with tests as we saw last
+week.
+
+
+```r
+x <- 0:100
+x < 40
+```
+
+```
+##   [1]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+##  [12]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+##  [23]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
+##  [34]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE
+##  [45] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+##  [56] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+##  [67] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+##  [78] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+##  [89] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
+## [100] FALSE FALSE
+```
+
+```r
+sum(x < 40)
+```
+
+```
+## [1] 40
+```
+
+This is a really R way of doing things that we will take advantage of when we'll
+be writing functions.
+
+# Lists
+
+Lists are an extension of vectors that allow the storage of multiple classes in
+a single object.
+
+
+```r
+x <- list(123, "cats", TRUE)
+class(x)
+```
+
+```
+## [1] "list"
+```
+
+```r
+x
+```
+
+```
+## [[1]]
+## [1] 123
+## 
+## [[2]]
+## [1] "cats"
+## 
+## [[3]]
+## [1] TRUE
+```
+
+* Show how R presents lists, the double [[]] and the single [].*
+
+We can use `[[]]` to select each element of the list:
+
+
+```r
+x[[1]]
+```
+
+```
+## [1] 123
+```
+
+```r
+class(x[[1]])
+```
+
+```
+## [1] "numeric"
+```
+
+Lists can contain vectors of different lengths:
+
+
+```r
+x <- list(c(5, 10, 20), "cats", c(TRUE, FALSE))
+x[[1]]
+```
+
+```
+## [1]  5 10 20
+```
+
+```r
+x[[1]][2]
+```
+
+```
+## [1] 10
+```
+
+Similarly to vectors, lists can be nammed:
+
+
+```r
+x <- list("numbers"=c("first"=5, "second"=10, "third"=20),
+          "animals"=c("cats", "dogs", "chickens"),
+          "logicals"=c(TRUE, FALSE, TRUE))
+x[[2]][1]
+```
+
+```
+## [1] "cats"
+```
+
+```r
+x["animals"][1]
+```
+
+```
+## $animals
+## [1] "cats"     "dogs"     "chickens"
+```
+
+```r
+x$animals[1]
+```
+
+```
+## [1] "cats"
+```
+
+```r
+names(x)
+```
+
+```
+## [1] "numbers"  "animals"  "logicals"
+```
+
+### Challenge
+How can you obtain the name of the second element inside the vector contained in
+the first item in this list? In other words, what is the command that would
+return `"second"`?
+
+### Answer
+
+Possible answers:
+names(x$numbers)[2]
+names(x$numbers[2])
+names(x[[1]][2])
 
 
 # Presentation of the Survey Data
-
-
 
 We are studying the species and weight of animals caught in plots in our study
 area.  The dataset is stored as a `.csv` file: each row holds information for a
@@ -37,8 +281,6 @@ surveys <- read.csv('data/surveys.csv')
 
 <!--- this chunk if for internal use so code in this lesson can be evaluated --->
 
-
-__At this point, make sure all participants have the data loaded__
 
 This statement doesn't produce any output because assignment doesn't display
 anything. If we want to check that our data has been loaded, we can print the
@@ -103,8 +345,6 @@ therefore require some attention.
 
 
 ## Factors
-
-
 
 Factors are used to represent categorical data. Factors can be ordered or
 unordered and are an important class for statistical analysis and for plotting.
@@ -260,429 +500,4 @@ table(exprmt)
 barplot(table(exprmt))
 ```
 
-![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
-
-# Subsetting data
-
-
-
-In particular for larger datasets, it can be tricky to remember the column
-number that corresponds to a particular variable. (Are species names in column 5
-or 7? oh, right... they are in column 6). In some cases, in which column the
-variable will be can change if the script you are using adds or removes
-columns. It's therefore often better to use column names to refer to a
-particular variable, and it makes your code easier to read and your intentions
-clearer.
-
-You can do operations on a particular column, by selecting it using the `$`
-sign. In this case, the entire column is a vector. For instance, to extract all
-the weights from our datasets, we can use: `surveys$wgt`. You can use
-`names(surveys)` or `colnames(surveys)` to remind yourself of the column names.
-
-In some cases, you may way to select more than one column. You can do this using
-the square brackets: `surveys[, c("wgt", "sex")]`.
-
-When analyzing data, though, we often want to look at partial statistics, such
-as the maximum value of a variable per species or the average value per plot.
-
-One way to do this is to select the data we want, and create a new temporary
-array, using the `subset()` function. For instance, if we just want to look at
-the animals of the species "DO":
-
-
-```r
-surveys_DO <- subset(surveys, species == "DO")
-```
-
-### Challenge
-
-1. What does the following do?
-
-
-
-1. Use the function `subset` twice to create a `data.frame` that contains all
-individuals of the species "DM" that were collected in 2002.
-  * How many individuals of the species "DM" were collected in 2002?
-
-
-
-## Adding a column to our dataset
-
-
-
-Sometimes, you may have to add a new column to your dataset that represents a
-new variable. You can add columns to a `data.frame` using the function `cbind()`
-(__c__olumn __bind__). Beware, the additional column must have the same number
-of elements as there are rows in the `data.frame`.
-
-In our survey dataset, the species are represented by a 2-letter code (e.g.,
-"AB"), however, we would like to include the species name. The correspondance
-between the 2 letter code and the names are in the file `species.csv`. In this
-file, one column includes the genus and another includes the species. First, we
-are going to import this file in memory:
-
-
-```r
-species <- read.csv("data/species.csv")
-```
-
-We are then going to use the function `match()` to create a vector that contains
-the genus names for all our observations. The function `match()` takes at least
-2 arguments: the values to be matched (in our case the 2 letter code from the
-`surveys` data frame held in the column `species`), and the table that contains
-the values to be matched against (in our case the 2 letter code in the `species`
-data frame held in the column `species_id`). The function returns the position
-of the matches in the table, and this can be used to retrieve the genus names:
-
-
-```r
-surveys_spid_index <- match(surveys$species, species$species_id)
-surveys_genera <- species$genus[surveys_spid_index]
-```
-
-Now that we have our vector of genus names, we can add it as a new column to our
-`surveys` object:
-
-
-```r
-surveys <- cbind(surveys, genus=surveys_genera)
-```
-
-### Challenge
-
-Use the same approach to also include the species names in the `surveys` data
-frame.
-
-
-
-
-
-
-
-```r
-## and check out the result
-head(surveys)
-```
-
-```
-##   record_id month day year plot species sex wgt       genus species_name
-## 1         1     7  16 1977    2      NL   M  NA     Neotoma     albigula
-## 2         2     7  16 1977    3      NL   M  NA     Neotoma     albigula
-## 3         3     7  16 1977    2      DM   F  NA   Dipodomys     merriami
-## 4         4     7  16 1977    7      DM   M  NA   Dipodomys     merriami
-## 5         5     7  16 1977    3      DM   M  NA   Dipodomys     merriami
-## 6         6     7  16 1977    1      PF   M  NA Perognathus       flavus
-```
-
-<!--- should we cover merge()? --->
-
-# Adding rows
-
-<!--- Even if this is not optimal, using this approach requires to cover less   -->
-<!--- material such as logical operations on vectors. Depending on how fast the -->
-<!--- group moves, it might be better to show the correct way.                  -->
-
-
-
-Let's create a `data.frame` that contains the information only for the species
-"DO" and "DM". We know how to create the data set for each species with the
-function `subset()`:
-
-
-```r
-surveys_DO <- subset(surveys, species == "DO")
-surveys_DM <- subset(surveys, species == "DM")
-```
-
-Similarly to `cbind()` for columns, there is a function `rbind()` (__r__ow
-__bind__) that puts together two `data.frame`. With `rbind()` the number of
-columns and their names must be identical between the two objects:
-
-
-```r
-surveys_DO_DM <- rbind(surveys_DO, surveys_DM)
-```
-
-### Challenge
-
-Using a similar approach, construct a new `data.frame` that only includes data
-for the years 2000 and 2001.
-
-
-
-# Removing columns
-
-
-
-Just like you can select columns by their positions in the `data.frame` or by
-their names, you can remove them similarly.
-
-To remove it by column number:
-
-
-```r
-surveys_noDate <- surveys[, -c(2:4)]
-colnames(surveys)
-```
-
-```
-##  [1] "record_id"    "month"        "day"          "year"        
-##  [5] "plot"         "species"      "sex"          "wgt"         
-##  [9] "genus"        "species_name"
-```
-
-```r
-colnames(surveys_noDate)
-```
-
-```
-## [1] "record_id"    "plot"         "species"      "sex"         
-## [5] "wgt"          "genus"        "species_name"
-```
-
-The easiest way to remove by name is to use the `subset()` function. This time
-we need to specify explicitly the argument `select` as the default is to subset
-on rows (as above). The minus sign indicates the names of the columns to remove
-(note that the column names should not be quoted):
-
-
-```r
-surveys_noDate2 <- subset(surveys, select=-c(month, day, year))
-colnames(surveys_noDate2)
-```
-
-```
-## [1] "record_id"    "plot"         "species"      "sex"         
-## [5] "wgt"          "genus"        "species_name"
-```
-
-# Removing rows
-
-
-
-Typically rows are not associated with names, so to remove them from the
-`data.frame`, you can do:
-
-
-```r
-surveys_missingRows <- surveys[-c(10, 50:70), ] # removing rows 10, and 50 to 70
-```
-
-
-# Calculating statistics
-
-
-
-Let's get a closer look at our data. For instance, we might want to know how
-many animals we trapped in each plot, or how many of each species were caught.
-
-To get a `vector` of all the species, we are going to use the `unique()`
-function that tells us the unique values in a given vector:
-
-
-```r
-unique(surveys$species)
-```
-
-```
-##  [1] NL DM PF PE DS PP SH OT DO OX SS OL RM    SA PM AH DX AB CB CM CQ RF
-## [24] PC PG PH PU CV UR UP ZL UL CS SC BA SF RO AS SO PI ST CU SU RX PB PL
-## [47] PX CT US
-## 49 Levels:  AB AH AS BA CB CM CQ CS CT CU CV DM DO DS DX NL OL OT ... ZL
-```
-
-The function `table()`, tells us how many of each species we have:
-
-
-```r
-table(surveys$species)
-```
-
-```
-## 
-##          AB    AH    AS    BA    CB    CM    CQ    CS    CT    CU    CV 
-##   763   303   437     2    46    50    13    16     1     1     1     1 
-##    DM    DO    DS    DX    NL    OL    OT    OX    PB    PC    PE    PF 
-## 10596  3027  2504    40  1252  1006  2249    12  2891    39  1299  1597 
-##    PG    PH    PI    PL    PM    PP    PU    PX    RF    RM    RO    RX 
-##     8    32     9    36   899  3123     5     6    75  2609     8     2 
-##    SA    SC    SF    SH    SO    SS    ST    SU    UL    UP    UR    US 
-##    75     1    43   147    43   248     1     5     4     8    10     4 
-##    ZL 
-##     2
-```
-
-R has a lot of built in statistical functions, like `mean()`, `median()`,
-`max()`, `min()`. Let's start by calculating the average weight of all the
-animals using the function `mean()`:
-
-
-```r
-mean(surveys$wgt)
-```
-
-```
-## [1] NA
-```
-
-Hmm, we just get `NA`. That's because we don't have the weight for every animal
-and missing data is recorded as `NA`. By default, all R functions operating on a
-vector that contains missing data will return NA. It's a way to make sure that
-users know they have missing data, and make a conscious decision on how to deal
-with it.
-
-When dealing with simple statistics like the mean, the easiest way to ignore
-`NA` (the missing data) is to use `na.rm=TRUE` (`rm` stands for remove):
-
-
-```r
-mean(surveys$wgt, na.rm=TRUE)
-```
-
-```
-## [1] 42.67243
-```
-
-In some cases, it might be useful to remove the missing data from the
-vector. For this purpose, R comes with the function `na.omit`:
-
-
-```r
-wgt_noNA <- na.omit(surveys$wgt)
-```
-
-For some applications, it's useful to keep all observations, for others, it
-might be best to remove all observations that contain missing data. The function
-`complete.cases()` removes any rows that contain at least one missing
-observation:
-
-
-```r
-surveys_complete <- surveys[complete.cases(surveys), ]
-```
-
-<!--- need to cover negation, and vector operations for this...
-If you want to remove only the observations that are missing data for one
-variable, you can use the function `is.na()`. For instance, to create a new
-dataset that only contains individuals that have been weighted:
-
-
-```r
-surveys_with_weights <- surveys[!is.na(surveys$weight), ]
-```
-
-```
-## Warning in is.na(surveys$weight): is.na() applied to non-(list or vector)
-## of type 'NULL'
-```
---->
-
-### Challenge
-
-1. To determine the number of elements found in a vector, we can use
-use the function `length()` (e.g., `length(surveys$wgt)`). Using `length()`, how
-many animals have not had their weights recorded?
-
-1. What is the median weight for the males?
-
-1. What is the range (minimum and maximum) weight?
-
-1. Bonus question: what is the standard error for the weight? (hints: there is
-   no built-in function to compute standard errors, and the function for the
-   square root is `sqrt()`).
-
-
-
-# Statistics across factor levels
-
-
-
-What if we want the maximum weight for all animals, or the average for each
-plot?
-
-R comes with convenient functions to do this kind of operations, functions in
-the `apply` family.
-
-For instance, `tapply()` allows us to repeat a function across each level of a
-factor. The format is:
-
-
-```r
-tapply(columns_to_do_the_calculations_on, factor_to_sort_on, function)
-```
-
-If we want to calculate the mean for each species (using the complete dataset):
-
-
-```r
-tapply(surveys_complete$wgt, surveys_complete$species, mean)
-```
-
-```
-##                    AB         AH         AS         BA         CB 
-##         NA         NA         NA         NA   8.600000         NA 
-##         CM         CQ         CS         CT         CU         CV 
-##         NA         NA         NA         NA         NA         NA 
-##         DM         DO         DS         DX         NL         OL 
-##  43.157864  48.870523 120.130546         NA 159.245660  31.575258 
-##         OT         OX         PB         PC         PE         PF 
-##  24.230556  21.000000  31.735943         NA  21.586508   7.923127 
-##         PG         PH         PI         PL         PM         PP 
-##         NA  31.064516  19.250000  19.138889  21.364155  17.173942 
-##         PU         PX         RF         RM         RO         RX 
-##         NA  19.000000  13.386667  10.585010  10.250000  15.500000 
-##         SA         SC         SF         SH         SO         SS 
-##         NA         NA  58.878049  73.148936  55.414634  93.500000 
-##         ST         SU         UL         UP         UR         US 
-##         NA         NA         NA         NA         NA         NA 
-##         ZL 
-##         NA
-```
-
-This produces some `NA` because R "remembers" all species that were found in the
-original dataset, even if they didn't have any weight data associated with them
-in the current dataset. To remove the `NA` and make things clearer, we can
-redefine the levels for the factor "species" before calculating the means. Let's
-also create an object to store these values:
-
-
-```r
-surveys_complete$species <- factor(surveys_complete$species)
-species_mean <- tapply(surveys_complete$wgt, surveys_complete$species, mean)
-```
-
-### Challenge
-
-1. Create new objects to store: the standard deviation, the maximum and minimum
-   values for the weight of each species
-1. How many species do you have these statistics for?
-1. Create a new data frame (called `surveys_summary`) that contains as columns:
-   * `species` the 2 letter code for the species names
-   * `mean_wgt` the mean weight for each species
-   * `sd_wgt` the standard deviation for each species
-   * `min_wgt`  the minimum weight for each species
-   * `max_wgt`  the maximum weight for each species
-
-
-
-**Answers**
-
-
-```r
-species_max <- tapply(surveys_complete$wgt, surveys_complete$species, max)
-species_min <- tapply(surveys_complete$wgt, surveys_complete$species, min)
-species_sd <- tapply(surveys_complete$wgt, surveys_complete$species, sd)
-nlevels(surveys_complete$species) # or length(species_mean)
-```
-
-```
-## [1] 25
-```
-
-```r
-surveys_summary <- data.frame(species=levels(surveys_complete$species),
-                              mean_wgt=species_mean,
-                              sd_wgt=species_sd,
-                              min_wgt=species_min,
-                              max_wgt=species_max)
-```
+![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19-1.png) 

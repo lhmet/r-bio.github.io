@@ -1,15 +1,118 @@
 ---
 layout: page
-title: 02 -- `data.frame` and other data structures
-time: 2 hours
+title: 02 -- coercion, lists, factors, and a little bit of `data.frame`
+time: 2 hours 20 min
 ---
+
+# Coercion
+
+Last week, we covered vectors. Vectors are data structures that R uses to store
+information. We spent some time covering how vectors have classes associated
+with them. What happens if we try to create a vector that contains elements of
+different classes?
+
+```{r}
+x <- c(123, "cats", TRUE)
+class(x)
+```
+
+What happened here? Vectors can only have 1 class associated with them,
+therefore R has to make decisions to convert (= coerce) the content of this
+vector to find a "common denominator". To figure out the rules R uses let's
+explore some options:
+
+```{r}
+class(c(TRUE, 1))
+class(c(TRUE, "cats"))
+class(c(1, "cats"))
+```
+
+```
+logical --> numeric --> character <-- logical
+```
+
+These conversions between formats can even be used to do maths:
+
+```{r}
+1 + TRUE  # TRUE == 1
+1 + FALSE # FALSE == 0
+```
+
+and vectors of logicals can be used with functions normally used with numbers:
+
+```{r}
+## Gives the number of elements that are TRUE
+sum(c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE))
+## Gives the proportion of elements that are TRUE
+mean(c(TRUE, FALSE, TRUE, TRUE, FALSE, TRUE))
+```
+
+These properties are really useful in conjunction with tests as we saw last
+week.
+
+```{r}
+x <- 0:100
+x < 40
+sum(x < 40)
+```
+
+This is a really R way of doing things that we will take advantage of when we'll
+be writing functions.
+
+# Lists
+
+Lists are an extension of vectors that allow the storage of multiple classes in
+a single object.
+
+```{r}
+x <- list(123, "cats", TRUE)
+class(x)
+x
+```
+
+* Show how R presents lists, the double [[]] and the single [].*
+
+We can use `[[]]` to select each element of the list:
+
+```{r}
+x[[1]]
+class(x[[1]])
+```
+
+Lists can contain vectors of different lengths:
+
+```{r}
+x <- list(c(5, 10, 20), "cats", c(TRUE, FALSE))
+x[[1]]
+x[[1]][2]
+```
+
+Similarly to vectors, lists can be nammed:
+
+```{r}
+x <- list("numbers"=c("first"=5, "second"=10, "third"=20),
+          "animals"=c("cats", "dogs", "chickens"),
+          "logicals"=c(TRUE, FALSE, TRUE))
+x[[2]][1]
+x["animals"][1]
+x$animals[1]
+names(x)
+```
+
+### Challenge
+How can you obtain the name of the second element inside the vector contained in
+the first item in this list? In other words, what is the command that would
+return `"second"`?
+
+### Answer
+
+Possible answers:
+names(x$numbers)[2]
+names(x$numbers[2])
+names(x[[1]][2])
 
 
 # Presentation of the Survey Data
-
-```{r, echo=FALSE, purl=TRUE}
-# Presentation of the survey data
-```
 
 We are studying the species and weight of animals caught in plots in our study
 area.  The dataset is stored as a `.csv` file: each row holds information for a
@@ -40,8 +143,6 @@ surveys <- read.csv('data/surveys.csv')
 ```{r, echo=FALSE, purl=FALSE}
 surveys <- read.csv('data/surveys.csv')
 ```
-
-__At this point, make sure all participants have the data loaded__
 
 This statement doesn't produce any output because assignment doesn't display
 anything. If we want to check that our data has been loaded, we can print the
@@ -88,10 +189,6 @@ therefore require some attention.
 
 
 ## Factors
-
-```{r, echo=FALSE, purl=TRUE}
-### Factors
-```
 
 Factors are used to represent categorical data. Factors can be ordered or
 unordered and are an important class for statistical analysis and for plotting.
@@ -169,370 +266,4 @@ exprmt <- factor(c("treat1", "treat2", "treat1", "treat3", "treat1", "control",
                    "treat1", "treat2", "treat3"))
 table(exprmt)
 barplot(table(exprmt))
-```
-
-# Subsetting data
-
-```{r, echo=FALSE, purl=TRUE}
-## subsetting data
-```
-
-In particular for larger datasets, it can be tricky to remember the column
-number that corresponds to a particular variable. (Are species names in column 5
-or 7? oh, right... they are in column 6). In some cases, in which column the
-variable will be can change if the script you are using adds or removes
-columns. It's therefore often better to use column names to refer to a
-particular variable, and it makes your code easier to read and your intentions
-clearer.
-
-You can do operations on a particular column, by selecting it using the `$`
-sign. In this case, the entire column is a vector. For instance, to extract all
-the weights from our datasets, we can use: `surveys$wgt`. You can use
-`names(surveys)` or `colnames(surveys)` to remind yourself of the column names.
-
-In some cases, you may way to select more than one column. You can do this using
-the square brackets: `surveys[, c("wgt", "sex")]`.
-
-When analyzing data, though, we often want to look at partial statistics, such
-as the maximum value of a variable per species or the average value per plot.
-
-One way to do this is to select the data we want, and create a new temporary
-array, using the `subset()` function. For instance, if we just want to look at
-the animals of the species "DO":
-
-```{r, purl=FALSE}
-surveys_DO <- subset(surveys, species == "DO")
-```
-
-### Challenge
-
-1. What does the following do?
-
-  ```{r, echo=FALSE, purl=TRUE}
-  ## What does the following do? (Try to guess without executing it)
-  ## surveys_DO$month[2] <- 8
-  ```
-
-1. Use the function `subset` twice to create a `data.frame` that contains all
-individuals of the species "DM" that were collected in 2002.
-  * How many individuals of the species "DM" were collected in 2002?
-
-  ```{r, echo=FALSE, purl=TRUE}
-  ##  Use the function `subset` twice to create a `data.frame` that
-  ##  contains all individuals of the species "DM" that were collected
-  ##  in 2002.
-  ##   * How many individuals of the species "DM" were collected in 2002?
-  ```
-
-## Adding a column to our dataset
-
-```{r, echo=FALSE, purl=TRUE}
-## Adding columns
-```
-
-Sometimes, you may have to add a new column to your dataset that represents a
-new variable. You can add columns to a `data.frame` using the function `cbind()`
-(__c__olumn __bind__). Beware, the additional column must have the same number
-of elements as there are rows in the `data.frame`.
-
-In our survey dataset, the species are represented by a 2-letter code (e.g.,
-"AB"), however, we would like to include the species name. The correspondance
-between the 2 letter code and the names are in the file `species.csv`. In this
-file, one column includes the genus and another includes the species. First, we
-are going to import this file in memory:
-
-```{r, purl=TRUE}
-species <- read.csv("data/species.csv")
-```
-
-We are then going to use the function `match()` to create a vector that contains
-the genus names for all our observations. The function `match()` takes at least
-2 arguments: the values to be matched (in our case the 2 letter code from the
-`surveys` data frame held in the column `species`), and the table that contains
-the values to be matched against (in our case the 2 letter code in the `species`
-data frame held in the column `species_id`). The function returns the position
-of the matches in the table, and this can be used to retrieve the genus names:
-
-```{r, purl=TRUE}
-surveys_spid_index <- match(surveys$species, species$species_id)
-surveys_genera <- species$genus[surveys_spid_index]
-```
-
-Now that we have our vector of genus names, we can add it as a new column to our
-`surveys` object:
-
-```{r, purl=TRUE}
-surveys <- cbind(surveys, genus=surveys_genera)
-```
-
-### Challenge
-
-Use the same approach to also include the species names in the `surveys` data
-frame.
-
-```{r, echo=FALSE, purl=TRUE}
-## Use the same approach to also include the species names in the
-## `surveys` data frame.
-```
-
-
-```{r, echo=FALSE, purl=FALSE}
-surveys_species <- species$species[surveys_spid_index]
-surveys <- cbind(surveys, species_name=surveys_species)
-```
-
-```{r, results='show'}
-## and check out the result
-head(surveys)
-```
-
-<!--- should we cover merge()? --->
-
-# Adding rows
-
-<!--- Even if this is not optimal, using this approach requires to cover less   -->
-<!--- material such as logical operations on vectors. Depending on how fast the -->
-<!--- group moves, it might be better to show the correct way.                  -->
-
-```{r, echo=FALSE, purl=TRUE}
-## Adding rows
-```
-
-Let's create a `data.frame` that contains the information only for the species
-"DO" and "DM". We know how to create the data set for each species with the
-function `subset()`:
-
-```{r, purl=FALSE}
-surveys_DO <- subset(surveys, species == "DO")
-surveys_DM <- subset(surveys, species == "DM")
-```
-
-Similarly to `cbind()` for columns, there is a function `rbind()` (__r__ow
-__bind__) that puts together two `data.frame`. With `rbind()` the number of
-columns and their names must be identical between the two objects:
-
-```{r, purl=FALSE}
-surveys_DO_DM <- rbind(surveys_DO, surveys_DM)
-```
-
-### Challenge
-
-Using a similar approach, construct a new `data.frame` that only includes data
-for the years 2000 and 2001.
-
-```{r, echo=FALSE, purl=TRUE}
-## How many columns are now in (1) the `data.frame` `surveys`, (2) the `data.frame`
-## `surveys_index`?
-```
-
-# Removing columns
-
-```{r, echo=FALSE, purl=FALSE}
-## Removing columns
-```
-
-Just like you can select columns by their positions in the `data.frame` or by
-their names, you can remove them similarly.
-
-To remove it by column number:
-
-```{r, results='show', purl=FALSE}
-surveys_noDate <- surveys[, -c(2:4)]
-colnames(surveys)
-colnames(surveys_noDate)
-```
-
-The easiest way to remove by name is to use the `subset()` function. This time
-we need to specify explicitly the argument `select` as the default is to subset
-on rows (as above). The minus sign indicates the names of the columns to remove
-(note that the column names should not be quoted):
-
-```{r, results='show', purl=FALSE}
-surveys_noDate2 <- subset(surveys, select=-c(month, day, year))
-colnames(surveys_noDate2)
-```
-
-# Removing rows
-
-```{r, echo=FALSE, purl=FALSE}
-## Removing rows
-```
-
-Typically rows are not associated with names, so to remove them from the
-`data.frame`, you can do:
-
-```{r, results='show', purl=FALSE}
-surveys_missingRows <- surveys[-c(10, 50:70), ] # removing rows 10, and 50 to 70
-```
-
-
-# Calculating statistics
-
-```{r, echo=FALSE, purl=FALSE}
-## Calculating statistics
-```
-
-Let's get a closer look at our data. For instance, we might want to know how
-many animals we trapped in each plot, or how many of each species were caught.
-
-To get a `vector` of all the species, we are going to use the `unique()`
-function that tells us the unique values in a given vector:
-
-```{r, purl=FALSE}
-unique(surveys$species)
-```
-
-The function `table()`, tells us how many of each species we have:
-
-```{r, purl=FALSE}
-table(surveys$species)
-```
-
-R has a lot of built in statistical functions, like `mean()`, `median()`,
-`max()`, `min()`. Let's start by calculating the average weight of all the
-animals using the function `mean()`:
-
-```{r, results='show', purl=FALSE}
-mean(surveys$wgt)
-```
-
-Hmm, we just get `NA`. That's because we don't have the weight for every animal
-and missing data is recorded as `NA`. By default, all R functions operating on a
-vector that contains missing data will return NA. It's a way to make sure that
-users know they have missing data, and make a conscious decision on how to deal
-with it.
-
-When dealing with simple statistics like the mean, the easiest way to ignore
-`NA` (the missing data) is to use `na.rm=TRUE` (`rm` stands for remove):
-
-```{r, results='show', purl=FALSE}
-mean(surveys$wgt, na.rm=TRUE)
-```
-
-In some cases, it might be useful to remove the missing data from the
-vector. For this purpose, R comes with the function `na.omit`:
-
-```{r, purl=FALSE}
-wgt_noNA <- na.omit(surveys$wgt)
-```
-
-For some applications, it's useful to keep all observations, for others, it
-might be best to remove all observations that contain missing data. The function
-`complete.cases()` removes any rows that contain at least one missing
-observation:
-
-```{r, purl=FALSE}
-surveys_complete <- surveys[complete.cases(surveys), ]
-```
-
-<!--- need to cover negation, and vector operations for this...
-If you want to remove only the observations that are missing data for one
-variable, you can use the function `is.na()`. For instance, to create a new
-dataset that only contains individuals that have been weighted:
-
-```{r, purl=FALSE}
-surveys_with_weights <- surveys[!is.na(surveys$weight), ]
-```
---->
-
-### Challenge
-
-1. To determine the number of elements found in a vector, we can use
-use the function `length()` (e.g., `length(surveys$wgt)`). Using `length()`, how
-many animals have not had their weights recorded?
-
-1. What is the median weight for the males?
-
-1. What is the range (minimum and maximum) weight?
-
-1. Bonus question: what is the standard error for the weight? (hints: there is
-   no built-in function to compute standard errors, and the function for the
-   square root is `sqrt()`).
-
-```{r, echo=FALSE, purl=TRUE}
-## 1. To determine the number of elements found in a vector, we can use
-## use the function `length()` (e.g., `length(surveys$wgt)`). Using `length()`, how
-## many animals have not had their weights recorded?
-
-## 2. What is the median weight for the males?
-
-## 3. What is the range (minimum and maximum) weight?
-
-## 4. Bonus question: what is the standard error for the weight? (hints: there is
-##    no built-in function to compute standard errors, and the function for the
-##    square root is `sqrt()`).
-```
-
-# Statistics across factor levels
-
-```{r, echo=FALSE, purl=TRUE}
-## Statistics across factor levels
-```
-
-What if we want the maximum weight for all animals, or the average for each
-plot?
-
-R comes with convenient functions to do this kind of operations, functions in
-the `apply` family.
-
-For instance, `tapply()` allows us to repeat a function across each level of a
-factor. The format is:
-
-```{r, eval=FALSE, purl=FALSE}
-tapply(columns_to_do_the_calculations_on, factor_to_sort_on, function)
-```
-
-If we want to calculate the mean for each species (using the complete dataset):
-
-```{r, purl=FALSE}
-tapply(surveys_complete$wgt, surveys_complete$species, mean)
-```
-
-This produces some `NA` because R "remembers" all species that were found in the
-original dataset, even if they didn't have any weight data associated with them
-in the current dataset. To remove the `NA` and make things clearer, we can
-redefine the levels for the factor "species" before calculating the means. Let's
-also create an object to store these values:
-
-```{r, purl=FALSE}
-surveys_complete$species <- factor(surveys_complete$species)
-species_mean <- tapply(surveys_complete$wgt, surveys_complete$species, mean)
-```
-
-### Challenge
-
-1. Create new objects to store: the standard deviation, the maximum and minimum
-   values for the weight of each species
-1. How many species do you have these statistics for?
-1. Create a new data frame (called `surveys_summary`) that contains as columns:
-   * `species` the 2 letter code for the species names
-   * `mean_wgt` the mean weight for each species
-   * `sd_wgt` the standard deviation for each species
-   * `min_wgt`  the minimum weight for each species
-   * `max_wgt`  the maximum weight for each species
-
-```{r, echo=FALSE, purl=TRUE}
-## 1. Create new objects to store: the standard deviation, the maximum and minimum
-##    values for the weight of each species
-## 2. How many species do you have these statistics for?
-## 3. Create a new data frame (called `surveys_summary`) that contains as columns:
-##    * `species` the 2 letter code for the species names
-##    * `mean_wgt` the mean weight for each species
-##    * `sd_wgt` the standard deviation for each species
-##    * `min_wgt`  the minimum weight for each species
-##    * `max_wgt`  the maximum weight for each species
-```
-
-**Answers**
-
-```{r, purl=FALSE}
-species_max <- tapply(surveys_complete$wgt, surveys_complete$species, max)
-species_min <- tapply(surveys_complete$wgt, surveys_complete$species, min)
-species_sd <- tapply(surveys_complete$wgt, surveys_complete$species, sd)
-nlevels(surveys_complete$species) # or length(species_mean)
-surveys_summary <- data.frame(species=levels(surveys_complete$species),
-                              mean_wgt=species_mean,
-                              sd_wgt=species_sd,
-                              min_wgt=species_min,
-                              max_wgt=species_max)
 ```

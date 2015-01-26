@@ -4,6 +4,11 @@ title: 02 -- coercion, lists, factors, and a little bit of `data.frame`
 time: 2 hours 20 min
 ---
 
+
+```r
+opts_chunk$set(fig.path="../figure/")
+```
+
 # Coercion
 
 Last week, we covered vectors. Vectors are data structures that R uses to store
@@ -500,4 +505,4 @@ table(exprmt)
 barplot(table(exprmt))
 ```
 
-![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19-1.png) 
+![plot of chunk unnamed-chunk-20](../figure/unnamed-chunk-20-1.png) 

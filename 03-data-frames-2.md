@@ -244,17 +244,15 @@ surveys_DO <- subset(surveys, species == "DO")
 
 ### Challenge
 
-1. What does the following do?
-
-
+1. What does the following do (Try to guess without executing it)?
+   `surveys_DO$month[2] <- 8`
 
 1. Use the function `subset` to create a `data.frame` that contains all
-individuals of the species "DM" that were collected in 2002.
-  * How many individuals of the species "DM" were collected in 2002?
+individuals of the species "DM" that were collected in 2002. How many
+individuals of the species "DM" were collected in 2002?
 
 
-
-## Adding a column to our dataset
+# Adding a column to our dataset
 
 
 

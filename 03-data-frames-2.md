@@ -151,7 +151,7 @@ country_climate <- data.frame(country=c("Canada", "Panama", "South Africa", "Aus
    second lecture to review the coercion rules R uses.
 
 
-## Inspecting `data.frame` objects
+# Inspecting `data.frame` objects
 
 We already saw how the functions `head()` and `str()` can be useful to check the
 content and the structure of a `data.frame`. Here is a non-exhaustive list of
@@ -192,41 +192,21 @@ indicate the rows and columns we want. Row numbers come first, followed by
 column numbers. Here are some examples:
 
 
-```r
-surveys[1, 1]   # first element in the first column of the data frame
-```
-
 ```
 ## [1] 1
-```
-
-```r
-surveys[1, 6]   # first element in the 6th column
 ```
 
 ```
 ## [1] 2
 ```
 
-```r
-surveys[1:3, 7] # first three elements in the 7th column
-```
-
 ```
 ## [1] "NL" "NL" "DM"
-```
-
-```r
-surveys[3, ]    # the 3rd element for all columns
 ```
 
 ```
 ##   X record_id month day year plot species_id sex wgt
 ## 3 3         3     7  16 1977    2         DM   F  NA
-```
-
-```r
-surveys[, 8]    # the entire 8th column
 ```
 
 ```
@@ -2322,10 +2302,6 @@ surveys[, 8]    # the entire 8th column
 ## [35514] "M" "F" "F" "F" "M" "M" ""  "M" "F" "F" "F" "M" "F" "F" ""  "F" "F"
 ## [35531] "F" "F" "F" "M" "M" "F" "F" "F" "M" "F" "F" "F" "F" ""  ""  ""  "F"
 ## [35548] "M" ""
-```
-
-```r
-head_surveys <- surveys[1:6, ] # surveys[1:6, ] is equivalent to head(surveys)
 ```
 
 ### Challenge

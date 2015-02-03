@@ -108,7 +108,7 @@ country_climate <- data.frame(country=c("Canada", "Panama", "South Africa", "Aus
    second lecture to review the coercion rules R uses.
 
 
-## Inspecting `data.frame` objects
+# Inspecting `data.frame` objects
 
 We already saw how the functions `head()` and `str()` can be useful to check the
 content and the structure of a `data.frame`. Here is a non-exhaustive list of
@@ -148,7 +148,7 @@ bracket notation (just like with vectors), except that we need to add a comma to
 indicate the rows and columns we want. Row numbers come first, followed by
 column numbers. Here are some examples:
 
-```{r, purl=FALSE}
+```{r, echo=FALSE, purl=FALSE}
 surveys[1, 1]   # first element in the first column of the data frame
 surveys[1, 6]   # first element in the 6th column
 surveys[1:3, 7] # first three elements in the 7th column

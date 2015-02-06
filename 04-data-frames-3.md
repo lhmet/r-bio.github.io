@@ -25,11 +25,8 @@ Typically, rows are not associated with names, so to remove them from the
 
 
 ```r
+surveys <- read.csv(file="data/surveys.csv", stringsAsFactors=FALSE)
 surveys_missingRows <- surveys[-c(10, 50:70), ] # removing rows 10, and 50 to 70
-```
-
-```
-## Error in eval(expr, envir, enclos): object 'surveys' not found
 ```
 
 
@@ -49,7 +46,10 @@ unique(surveys$species_id)
 ```
 
 ```
-## Error in unique(surveys$species_id): object 'surveys' not found
+##  [1] "NL" "DM" "PF" "PE" "DS" "PP" "SH" "OT" "DO" "OX" "SS" "OL" "RM" ""  
+## [15] "SA" "PM" "AH" "DX" "AB" "CB" "CM" "CQ" "RF" "PC" "PG" "PH" "PU" "CV"
+## [29] "UR" "UP" "ZL" "UL" "CS" "SC" "BA" "SF" "RO" "AS" "SO" "PI" "ST" "CU"
+## [43] "SU" "RX" "PB" "PL" "PX" "CT" "US"
 ```
 
 The function `table()`, tells us how many of each species we have:
@@ -60,7 +60,17 @@ table(surveys$species_id)
 ```
 
 ```
-## Error in table(surveys$species_id): object 'surveys' not found
+## 
+##          AB    AH    AS    BA    CB    CM    CQ    CS    CT    CU    CV 
+##   763   303   437     2    46    50    13    16     1     1     1     1 
+##    DM    DO    DS    DX    NL    OL    OT    OX    PB    PC    PE    PF 
+## 10596  3027  2504    40  1252  1006  2249    12  2891    39  1299  1597 
+##    PG    PH    PI    PL    PM    PP    PU    PX    RF    RM    RO    RX 
+##     8    32     9    36   899  3123     5     6    75  2609     8     2 
+##    SA    SC    SF    SH    SO    SS    ST    SU    UL    UP    UR    US 
+##    75     1    43   147    43   248     1     5     4     8    10     4 
+##    ZL 
+##     2
 ```
 
 R has a lot of built in statistical functions, like `mean()`, `median()`,
@@ -73,7 +83,7 @@ mean(surveys$wgt)
 ```
 
 ```
-## Error in mean(surveys$wgt): object 'surveys' not found
+## [1] NA
 ```
 
 Hmm, we just get `NA`. That's because we don't have the weight for every animal
@@ -91,7 +101,7 @@ mean(surveys$wgt, na.rm=TRUE)
 ```
 
 ```
-## Error in mean(surveys$wgt, na.rm = TRUE): object 'surveys' not found
+## [1] 42.67243
 ```
 
 In some cases, it might be useful to remove the missing data from the
@@ -100,10 +110,6 @@ vector. For this purpose, R comes with the function `na.omit`:
 
 ```r
 wgt_noNA <- na.omit(surveys$wgt)
-```
-
-```
-## Error in na.omit(surveys$wgt): object 'surveys' not found
 ```
 
 For some applications, it's useful to keep all observations, for others, it
@@ -116,10 +122,6 @@ observation:
 surveys_complete <- surveys[complete.cases(surveys), ]
 ```
 
-```
-## Error in eval(expr, envir, enclos): object 'surveys' not found
-```
-
 If you want to remove only the observations that are missing data for one
 variable, you can use the function `is.na()`. For instance, to create a new
 dataset that only contains individuals that have been weighted:
@@ -130,7 +132,8 @@ surveys_with_weights <- surveys[!is.na(surveys$weight), ]
 ```
 
 ```
-## Error in eval(expr, envir, enclos): object 'surveys' not found
+## Warning in is.na(surveys$weight): is.na() applied to non-(list or vector)
+## of type 'NULL'
 ```
 
 
@@ -176,7 +179,16 @@ tapply(surveys_complete$wgt, surveys_complete$species_id, mean)
 ```
 
 ```
-## Error in tapply(surveys_complete$wgt, surveys_complete$species_id, mean): object 'surveys_complete' not found
+##         BA         DM         DO         DS         NL         OL 
+##   8.600000  43.157864  48.870523 120.130546 159.245660  31.575258 
+##         OT         OX         PB         PE         PF         PH 
+##  24.230556  21.000000  31.735943  21.586508   7.923127  31.064516 
+##         PI         PL         PM         PP         PX         RF 
+##  19.250000  19.138889  21.364155  17.173942  19.000000  13.386667 
+##         RM         RO         RX         SF         SH         SO 
+##  10.585010  10.250000  15.500000  58.878049  73.148936  55.414634 
+##         SS 
+##  93.500000
 ```
 
 This produces some `NA` because R "remembers" all species that were found in the
@@ -188,18 +200,7 @@ also create an object to store these values:
 
 ```r
 surveys_complete$species_id <- factor(surveys_complete$species_id)
-```
-
-```
-## Error in factor(surveys_complete$species_id): object 'surveys_complete' not found
-```
-
-```r
 species_mean <- tapply(surveys_complete$wgt, surveys_complete$species_id, mean)
-```
-
-```
-## Error in tapply(surveys_complete$wgt, surveys_complete$species_id, mean): object 'surveys_complete' not found
 ```
 
 ### Challenge
@@ -221,34 +222,13 @@ species_mean <- tapply(surveys_complete$wgt, surveys_complete$species_id, mean)
 
 ```r
 species_max <- tapply(surveys_complete$wgt, surveys_complete$species_id, max)
-```
-
-```
-## Error in tapply(surveys_complete$wgt, surveys_complete$species_id, max): object 'surveys_complete' not found
-```
-
-```r
 species_min <- tapply(surveys_complete$wgt, surveys_complete$species_id, min)
-```
-
-```
-## Error in tapply(surveys_complete$wgt, surveys_complete$species_id, min): object 'surveys_complete' not found
-```
-
-```r
 species_sd <- tapply(surveys_complete$wgt, surveys_complete$species_id, sd)
-```
-
-```
-## Error in tapply(surveys_complete$wgt, surveys_complete$species_id, sd): object 'surveys_complete' not found
-```
-
-```r
 nlevels(surveys_complete$species_id) # or length(species_mean)
 ```
 
 ```
-## Error in levels(x): object 'surveys_complete' not found
+## [1] 25
 ```
 
 ```r
@@ -257,8 +237,4 @@ surveys_summary <- data.frame(species=levels(surveys_complete$species_id),
                               sd_wgt=species_sd,
                               min_wgt=species_min,
                               max_wgt=species_max)
-```
-
-```
-## Error in levels(surveys_complete$species_id): object 'surveys_complete' not found
 ```

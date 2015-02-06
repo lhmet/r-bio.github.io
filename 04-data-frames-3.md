@@ -25,7 +25,7 @@ Typically, rows are not associated with names, so to remove them from the
 
 
 ```r
-surveys <- read.csv(file="data/surveys.csv", stringsAsFactors=FALSE)
+surveys <- read.csv(file="data/surveys.csv")
 surveys_missingRows <- surveys[-c(10, 50:70), ] # removing rows 10, and 50 to 70
 ```
 
@@ -46,10 +46,10 @@ unique(surveys$species_id)
 ```
 
 ```
-##  [1] "NL" "DM" "PF" "PE" "DS" "PP" "SH" "OT" "DO" "OX" "SS" "OL" "RM" ""  
-## [15] "SA" "PM" "AH" "DX" "AB" "CB" "CM" "CQ" "RF" "PC" "PG" "PH" "PU" "CV"
-## [29] "UR" "UP" "ZL" "UL" "CS" "SC" "BA" "SF" "RO" "AS" "SO" "PI" "ST" "CU"
-## [43] "SU" "RX" "PB" "PL" "PX" "CT" "US"
+##  [1] NL DM PF PE DS PP SH OT DO OX SS OL RM    SA PM AH DX AB CB CM CQ RF
+## [24] PC PG PH PU CV UR UP ZL UL CS SC BA SF RO AS SO PI ST CU SU RX PB PL
+## [47] PX CT US
+## 49 Levels:  AB AH AS BA CB CM CQ CS CT CU CV DM DO DS DX NL OL OT ... ZL
 ```
 
 The function `table()`, tells us how many of each species we have:
@@ -179,16 +179,24 @@ tapply(surveys_complete$wgt, surveys_complete$species_id, mean)
 ```
 
 ```
-##         BA         DM         DO         DS         NL         OL 
-##   8.600000  43.157864  48.870523 120.130546 159.245660  31.575258 
-##         OT         OX         PB         PE         PF         PH 
-##  24.230556  21.000000  31.735943  21.586508   7.923127  31.064516 
-##         PI         PL         PM         PP         PX         RF 
-##  19.250000  19.138889  21.364155  17.173942  19.000000  13.386667 
-##         RM         RO         RX         SF         SH         SO 
-##  10.585010  10.250000  15.500000  58.878049  73.148936  55.414634 
-##         SS 
-##  93.500000
+##                    AB         AH         AS         BA         CB 
+##         NA         NA         NA         NA   8.600000         NA 
+##         CM         CQ         CS         CT         CU         CV 
+##         NA         NA         NA         NA         NA         NA 
+##         DM         DO         DS         DX         NL         OL 
+##  43.157864  48.870523 120.130546         NA 159.245660  31.575258 
+##         OT         OX         PB         PC         PE         PF 
+##  24.230556  21.000000  31.735943         NA  21.586508   7.923127 
+##         PG         PH         PI         PL         PM         PP 
+##         NA  31.064516  19.250000  19.138889  21.364155  17.173942 
+##         PU         PX         RF         RM         RO         RX 
+##         NA  19.000000  13.386667  10.585010  10.250000  15.500000 
+##         SA         SC         SF         SH         SO         SS 
+##         NA         NA  58.878049  73.148936  55.414634  93.500000 
+##         ST         SU         UL         UP         UR         US 
+##         NA         NA         NA         NA         NA         NA 
+##         ZL 
+##         NA
 ```
 
 This produces some `NA` because R "remembers" all species that were found in the

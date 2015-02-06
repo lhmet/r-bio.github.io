@@ -26,7 +26,7 @@ Typically, rows are not associated with names, so to remove them from the
 `data.frame`, you can do:
 
 ```{r, results='show', purl=FALSE}
-surveys <- read.csv(file="data/surveys.csv", stringsAsFactors=FALSE)
+surveys <- read.csv(file="data/surveys.csv")
 surveys_missingRows <- surveys[-c(10, 50:70), ] # removing rows 10, and 50 to 70
 ```
 

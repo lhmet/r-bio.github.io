@@ -3,7 +3,7 @@ layout: page
 title: Challenges
 ---
 
-## The sea cucumber challenge
+## The sea cucumber challenge {#sea-cucumber}
 
 For this challenge, you are going to use what you have learned in the first few
 weeks to solve common issues when dealing with data, and perform a quick

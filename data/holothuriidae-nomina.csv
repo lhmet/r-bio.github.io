@@ -1,0 +1,372 @@
+Order-current,Family-current,Genus-orig,Subgenus-orig,Species-orig,Author,Year,Genus-current,Subgenus-current,species-current,Available?,Valid?,Status (WoRMS),InUse
+Aspidochirotida,Holothuriidae,Mülleria,,Agassizii,Selenka,1867,Actinopyga,,agassizii,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Actinopyga,,albonigra,Cherbonnier & Féral,1984,Actinopyga,,albonigra,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Actinopyga,,bacilla,Cherbonnier,1988,Actinopyga,,bacilla,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Actinopyga,,serratidens bannwarthi,Panning,1944,Actinopyga,,bannwarthi,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Actinopyga,,caerulea,"Samyn, VandenSpiegel, Massin",2006,Actinopyga,,caerulea,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Actinopyga,,capillata,Rowe & Massin,2006,Actinopyga,,capillata,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Actinopyga,,echinites crassa,Panning,1944,Actinopyga,,crassa,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Mülleria),echinites,Jaeger,1833,Actinopyga,,echinites,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Actinopyga,,caroliniana,Tan Tiu,1981,Actinopyga,,echinites,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Muelleria,,plebeja,Selenka,1867,Actinopyga,,echinites or miliaris,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Actinopyga,,flammea,Cherbonnier,1979,Actinopyga,,flammea,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Actinopyga,,fusca,Cherbonnier,1980,Actinopyga,,fusca,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Mülleria),lecanora,Jaeger,1833,Actinopyga,,lecanora,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,lineolata,Quoy & Gaimard,1834,Actinopyga,,lecanora,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Microthele,dubia,Brandt,1835,Actinopyga,,lecanora,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,mauritiana,Quoy & Gaimard,1834,Actinopyga,,mauritiana,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,miliaris,Quoy & Gaimard,1834,Actinopyga,,miliaris,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Actinopyga,,polymorpha,Saville-Kent,1890,Actinopyga,,miliaris,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Actinopyga,,miliaris var. zamboanganensis,Cherbonnier & Féral (attributed to Domantay 1953),1984,Actinopyga,,miliaris,no,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Mülleria,,obesa,Selenka,1867,Actinopyga,,obesa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,rugosa,Saville-Kent,1890,Actinopyga,,obesa?,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Actinopyga,,obesa palauensis,Panning,1944,Actinopyga,,palauensis,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Actinopyga,,serratidens,Pearson,1903,Actinopyga,,serratidens,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Actinopyga,,spinea,Cherbonnier,1980,Actinopyga,,spinea,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,guamensis,Quoy & Gaimard,1834,Actinopyga,,varians,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Mülleria,,varians,Selenka,1867,Actinopyga,,varians,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Bohadschia),argus,Jaeger,1833,Bohadschia,,argus,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,leopardus,Saville-Kent,1890,Bohadschia,,argus,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Bohadschia,,atra,"Massin, Rasolofonirina, Conand & Samyn",1999,Bohadschia,,atra,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Bohadschia,,cousteaui,Cherbonnier,1954,Bohadschia,,cousteaui,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,Koellikeri,Semper,1868,Bohadschia,,koellikeri,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Bohadschia,,maculisparsa,Cherbonnier & Féral,1984,Bohadschia,,maculisparsa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Bohadschia),marmorata,Jaeger,1833,Bohadschia,,marmorata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Sporadipus,Colpochirota,Ualanensis,Brandt,1835,Bohadschia,,marmorata?,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Bohadschia,,mitsioensis,Cherbonnier,1988,Bohadschia,,mitsioensis,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Bohadschia),ocellata,Jaeger,1833,Bohadschia,,ocellata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,paradoxa,Selenka,1867,Bohadschia,,paradoxa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Bohadschia,,steinitzi,Cherbonnier,1963,Bohadschia,,steinitzi,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,subrubra,Quoy & Gaimard,1834,Bohadschia,,subrubra,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,utrimquestigmosa,Haacke,1880,Bohadschia,,subrubra?,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Bohadschia),albiguttata,Jaeger,1833,Bohadschia,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Bohadschia),lineolata,Jaeger,1833,Bohadschia,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,similis,Semper,1868,Bohadschia,,vitiensis,yes,no,unaccepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,tenuissima,Semper,1868,Bohadschia,,vitiensis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,vitiensis,Semper,1868,Bohadschia,,vitiensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,clemens,Ludwig,1875,Bohadschia,,vitiensis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,bivittata,Mitsukuri,1912,Bohadschia,,vitiensis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,coluber,Semper,1868,Holothuria,Acanthotrapeza,coluber,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Kubaryi,Ludwig,1875,Holothuria,Acanthotrapeza,kubaryi,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,pyxis,Selenka,1867,Holothuria,Acanthotrapeza,pyxis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,papillata,Bell,1887,Holothuria,Acanthotrapeza,pyxis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Acanthotrapeza,tripilata,Massin,1987,Holothuria,Acanthotrapeza,tripilata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Cystipus,casoae,Laguarda-Figueras & Solís-Marín,2009,Holothuria,Cystipus,casoae,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,cubana,Ludwig,1875,Holothuria,Cystipus,cubana,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,fossor,Deichmann,1926,Holothuria,Cystipus,cubana,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Cystipus,dura,Cherbonnier & Féral,1981,Holothuria,Cystipus,dura,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Cucumaria,,hartmeyeri,Helfer,1912,Holothuria,Cystipus,hartmeyeri,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,sucosa,Erwe,1919,Holothuria,Cystipus,hartmeyeri,no,no,unaccepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,inhabilis,Selenka,1867,Holothuria,Cystipus,inhabilis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,hypamma,Clark,1921,Holothuria,Cystipus,inhabilis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,parinhabilis,Cherbonnier,1951,Holothuria,Cystipus,inhabilis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,jousseaumei,Cherbonnier,1954,Holothuria,Cystipus,jousseaumei,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Cystipus,mammosa,Cherbonnier,1988,Holothuria,Cystipus,mammosa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,occidentalis,Ludwig,1875,Holothuria,Cystipus,occidentalis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothurnia [sic],,sulcata,Ludwig,1875,Holothuria,Cystipus,occidentalis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,pseudofossor,Deichmann,1930,Holothuria,Cystipus,pseudofossor,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Stichopus,,rigidus,Selenka,1867,Holothuria,Cystipus,rigida,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Cystipus,,pleuripus,Haacke,1880,Holothuria,Cystipus,rigida,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Mülleria,,aegyptiana,Helfer,1912,Holothuria,Cystipus,rigida,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,turrisimperfecta,Cherbonnier,1965,Holothuria,Cystipus,turrisimperfecta,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,Radackensis,Chamisso & Eysenhardt,1821,Holothuria,Halodeima,atra,yes,no/yes,unaccepted,candidate nomen oblitum
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Holothuria),atra,Jaeger,1833,Holothuria,Halodeima,atra,yes,no/yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Microthele,affinis,Brandt,1835,Holothuria,Halodeima,atra,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,amboinensis,Semper,1868,Holothuria,Halodeima,atra,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,sanguinolenta,Saville-Kent,1893,Holothuria,Halodeima,atra,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,chilensis,Semper,1868,Holothuria,Halodeima,chilensis,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,Thyone,edulis,Lesson,1830,Holothuria,Halodeima,edulis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,albida,Bell,1887,Holothuria,Halodeima,edulis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,enalia,Lampert,1885,Holothuria,Halodeima,enalia,yes,yes?,species inquirenda,no
+Aspidochirotida,Holothuriidae,Cuvieria,Holothuria,Floridana,Pourtalès,1851,Holothuria,Halodeima,floridana,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Heilprini,Ives,1890,Holothuria,Halodeima,floridana,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,nitida,Ives,1890,Holothuria,Halodeima,floridana,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Silamensis,Ives,1890,Holothuria,Halodeima,floridana,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,grisea,Selenka,1867,Holothuria,Halodeima,grisea,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,inornata,Semper,1868,Holothuria,Halodeima,inornata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Stichopus,,Kefersteinii,Selenka,1867,Holothuria,Halodeima,kefersteinii,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Paraholothuria,riojai,Caso,1964,Holothuria,Halodeima,kefersteinii,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Halodeima,manningi,Pawson,1978,Holothuria,Halodeima,manningi,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,mexicana,Ludwig,1875,Holothuria,Halodeima,mexicana,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,africana,Théel,1886,Holothuria,Halodeima,mexicana,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Halodeima,nigralutea,O'Loughlin,2007,Holothuria,Halodeima,nigralutea,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,pulla,Selenka,1867,Holothuria,Halodeima,pulla,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Microthele,aethiops,Brandt,1835,Holothuria,Halodeima,pulla?,yes,no,unaccepted,candidate nomen oblitum
+Aspidochirotida,Holothuriidae,Holothuria,,signata,Ludwig,1875,Holothuria,Halodeima,signata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Halodeima,,stocki,Cherbonnier,1964,Holothuria,Halodeima,surinamensis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,caparti,Cherbonnier,1964,Holothuria,Holothuria,caparti,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,stellati dakarensis,Panning,1939,Holothuria,Holothuria,dakarensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,fungosa,Helfer,1912,Holothuria,Holothuria,fungosa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,affinis,Heller,1868,Holothuria,Holothuria,helleri,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Helleri,Marenzeller von,1877,Holothuria,Holothuria,helleri,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Huberti,Russo,1899,Holothuria,Holothuria,helleri?,yes,no?,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,mammata,Grube,1840,Holothuria,Holothuria,mammata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,massaspicula,Cherbonnier,1954,Holothuria,Holothuria,massaspicula,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,Stellati,Delle Chiaje,1824,Holothuria,Holothuria,stellati,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Sporadipus,,glaber,Grube,1840,Holothuria,Holothuria,stellati,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,tremula,Linnaeus,1767,Holothuria,Holothuria,tubulosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,tubulosa,Gmelin,1791,Holothuria,Holothuria,tubulosa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,columnae,de Blainville,1821,Holothuria,Holothuria,tubulosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Cavolini,Delle Chiaje,1824,Holothuria,Holothuria,tubulosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Columnae,Delle Chiaje,1824,Holothuria,Holothuria,tubulosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Petagnae,Delle Chiaje,1824,Holothuria,Holothuria,tubulosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Lessonothuria,cavans,Massin & Tomascik,1996,Holothuria,Lessonothuria,cavans,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,cumulus,Clark,1921,Holothuria,Lessonothuria,cumulus,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Lessonothuria,duoturricula,Cherbonnier,1988,Holothuria,Lessonothuria,duoturricula,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,glandifera,Cherbonnier,1955,Holothuria,Lessonothuria,glandifera,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,immobilis,Semper,1868,Holothuria,Lessonothuria,immobilis,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,insignis,Ludwig,1875,Holothuria,Lessonothuria,insignis,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,lineata,Ludwig,1875,Holothuria,Lessonothuria,lineata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,maculosa,Pearson,1913,Holothuria,Lessonothuria,maculosa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Lessonothuria,multipilula,Liao,1975,Holothuria,Lessonothuria,multipilula,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,pardalis,Selenka,1867,Holothuria,Lessonothuria,pardalis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,peregrina,Ludwig,1875,Holothuria,Lessonothuria,pardalis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,tenuicornis,Helfer,1913,Holothuria,Lessonothuria,pardalis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Labidodemas,,punctulatum,Haacke,1880,Holothuria,Lessonothuria,pardalis or lineata,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Lessonothuria,tuberculata,Thandar,2007,Holothuria,Lessonothuria,tuberculata,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,verrucosa,Selenka,1867,Holothuria,Lessonothuria,verrucosa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,caesarea,Ludwig,1875,Holothuria,Lessonothuria,verrucosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,collaris,Haacke,1880,Holothuria,Lessonothuria,verrucosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Mertensiothuria,albofusca,Cherbonnier,1988,Holothuria,Mertensiothuria,albofusca,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,aphanes,Lampert,1885,Holothuria,Mertensiothuria,aphanes,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Mertensiothuria,arenacava,"Samyn, Massin & Muthiga",2001,Holothuria,Mertensiothuria,arenacava,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Mertensiothuria,artensis,Cherbonnier & Féral,1984,Holothuria,Mertensiothuria,artensis,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,fusco-rubra,Théel,1886,Holothuria,Mertensiothuria,fuscorubra,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Fistularia,hilla,Lesson,1830,Holothuria,Mertensiothuria,hilla,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,fuscopunctata,Quoy & Gaimard,1834,Holothuria,Mertensiothuria,hilla,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Stichopus,,gyrifer,Selenka,1867,Holothuria,Mertensiothuria,hilla,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Labidodemas,,leucopus,Haacke,1880,Holothuria,Mertensiothuria,hilla,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,macleari,Bell,1884,Holothuria,Mertensiothuria,hilla,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria (?),,patagonica,Perrier R,1904,Holothuria,Mertensiothuria,hilla,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Fasciola,Quoy & Gaimard,1834,Holothuria,Mertensiothuria,hilla?,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,isuga,Mitsukuri,1912,Holothuria,Mertensiothuria,isuga,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Stichopus,Gymnochirota,leucospilota,Brandt,1835,Holothuria,Mertensiothuria,leucospilota,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,vagabunda,Selenka,1867,Holothuria,Mertensiothuria,leucospilota,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,lagoena,Haacke,1880,Holothuria,Mertensiothuria,leucospilota,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,longipes,H. & E. in Lampert,1885,Holothuria,Mertensiothuria,leucospilota,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,,lamperti,Ludwig,1887,Holothuria,Mertensiothuria,leucospilota,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,oxurropa,Sluiter,1887,Holothuria,Mertensiothuria,leucospilota,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,infesta,Sluiter,1901,Holothuria,Mertensiothuria,leucospilota,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,homoea,Clark,1938,Holothuria,Mertensiothuria,leucospilota,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,gelatinosa,Heding,1939,Holothuria,Mertensiothuria,leucospilota,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Halodeima,,dicorona,Heding,1934,Holothuria,Mertensiothuria,leucospilota?,yes,no?,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,papillifera,Heding in Mortensen,1938,Holothuria,Mertensiothuria,papillifera or aphanes,yes,yes/no,species inquirenda,no
+Aspidochirotida,Holothuriidae,Holothuria,,aculeata,Semper,1868,Holothuria,Metriatyla,aculeata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,albiventer,Semper,1868,Holothuria,Metriatyla,albiventer,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,brauni,Helfer,1912,Holothuria,Metriatyla,brauni,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,conica,Clark,1938,Holothuria,Metriatyla,conica,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Metriatyla,horrida,Massin,1987,Holothuria,Metriatyla,horrida,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria,timama,Lesson,1830,Holothuria,Metriatyla,lessoni,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Metriatyla,lessoni,"Massin, Uthicke, Purcell, Rowe, Samyn",2009,Holothuria,Metriatyla,lessoni,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Martensii,Semper,1868,Holothuria,Metriatyla,martensii,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,bowensis,Ludwig,1875,Holothuria,Metriatyla,martensii,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,subverta,Clark,1921,Holothuria,Metriatyla,martensii,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Holothuria),scabra,Jaeger,1833,Holothuria,Metriatyla,scabra,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Microthele,tigris,Brandt,1835,Holothuria,Metriatyla,scabra,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,albida,Savigny in Selenka,1867,Holothuria,Metriatyla,scabra,no,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,saecularis,Bell,1887,Holothuria,Metriatyla,scabra,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Metriatyla,fuligina,Cherbonnier,1988,Holothuria,Metriatyla,scabra,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,gallensis,Pearson,1903,Holothuria,Metriatyla,scabra?,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,submersa,Sluiter,1901,Holothuria,Metriatyla,submersa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Metriatyla,tortonesei,Cherbonnier,1979,Holothuria,Metriatyla,tortonesei,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,fuscogilva,Cherbonnier,1980,Holothuria,Microthele,fuscogilva,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Mülleria,,hadra,Selenka,1867,Holothuria,Microthele,fuscogilva/whitmaei,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Holothuria),fuscopunctata,Jaeger,1833,Holothuria,Microthele,fuscopunctata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,axiologa,Clark,1921,Holothuria,Microthele,fuscopunctata,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Mülleria,,nobilis,Selenka,1867,Holothuria,Microthele,nobilis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Bohadschia,whitmaei,Bell,1887,Holothuria,Microthele,whitmaei,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,mammifera,Saville-Kent,1890,Holothuria,Microthele,whitmaei,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Microthele,maculata,Brandt,1835,Holothuria,Microthele,whitmaei or fuscogilva,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Panningothuria,austrinabassa,O'Loughlin,2007,Holothuria,Panningothuria,austrinabassa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Forskaolii/Forskahli,Delle Chiaje,1824,Holothuria,Panningothuria,forskali,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Catanensis,Grube,1840,Holothuria,Panningothuria,forskali,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,nigra,Gray,1848,Holothuria,Panningothuria,forskali,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Stichopus,,selenkae,Barrois,1882,Holothuria,Panningothuria,forskali,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Platyperona,crosnieri,Cherbonnier,1988,Holothuria,Platyperona,crosnieri,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,difficilis,Semper,1868,Holothuria,Platyperona,difficilis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,frequentamentis,Clark,1902,Holothuria,Platyperona,difficilis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,altimensis,Clark,1921,Holothuria,Platyperona,difficilis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Actinopyga,,Bedfordi,Deichmann,1922,Holothuria,Platyperona,difficilis,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Mülleria,,lubrica,Sluiter,1894,Holothuria,Platyperona,difficilis?,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Mülleria,,excellens,Ludwig,1875,Holothuria,Platyperona,excellens,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Platyperona?,insolita,Cherbonnier,1988,Holothuria,Platyperona,insolita,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Mülleria,,parvula,Selenka,1867,Holothuria,Platyperona,parvula,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,captiva,Ludwig,1875,Holothuria,Platyperona,parvula,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,abbreviata,Heilprin,1888,Holothuria,Platyperona,parvula,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Platyperona,rowei,Pawson & Gust,1981,Holothuria,Platyperona,rowei,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,samoana,Ludwig,1875,Holothuria,Platyperona,samoana,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Sanctori,Delle Chiaje,1824,Holothuria,Platyperona,sanctori,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,farcimen,Selenka,1867,Holothuria,Platyperona,sanctori,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Mülleria,,flavo-castanea,Théel,1886,Holothuria,Platyperona,sanctori,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,arguinensis,Koehler & Vaney,1906,Holothuria,Rowethuria,arguinensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Poli,Delle Chiaje,1824,Holothuria,Rowethuria,poli,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Rowethuria,vemae,Thandar,1988,Holothuria,Rowethuria,vemae,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,bacilla,Cherbonnier,1988,Holothuria,Selenkothuria,bacilla,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,spinea,Cherbonnier,1988,Holothuria,Selenkothuria,bacilla,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,carere,"Honey-Escandón, Solís-Marín, Laguarda-Figueras",2011,Holothuria,Selenkothuria,carere,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,erinaceus,Semper,1868,Holothuria,Selenkothuria,erinacea,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,erinaceus var. pygmaea,Semper,1868,Holothuria,Selenkothuria,erinacea,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Marenzelleri,Ludwig,1883,Holothuria,Selenkothuria,erinacea,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Andersoni,Bell,1886,Holothuria,Selenkothuria,erinacea,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,glaberrima,Selenka,1867,Holothuria,Selenkothuria,glaberrima,yes,no,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,lubrica,Selenka,1867,Holothuria,Selenkothuria,lubrica,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,kapiolaniae,Bell,1887,Holothuria,Selenkothuria,lubrica,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,pseudo-lubrica,Cherbonnier,1951,Holothuria,Selenkothuria,lubrica,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,mactanensis,Tan Tiu,1981,Holothuria,Selenkothuria,mactanensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,lucifuga,Quoy & Gaimard,1834,Holothuria,Selenkothuria,moebii,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Moebii,Ludwig,1883,Holothuria,Selenkothuria,moebii,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,parva,Krauss in Lampert,1885,Holothuria,Selenkothuria,parva,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,perrieri,Thandar,1977,Holothuria,Selenkothuria,parva,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,parvispinea,Massin,2013,Holothuria,Selenkothuria,parvispinea,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,portovallartensis,Caso,1954,Holothuria,Selenkothuria,portovallartensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,hjalmari,Deichmann in Maluf,1988,Holothuria,Selenkothuria,portovallartensis,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,sinica,Liao,1980,Holothuria,Selenkothuria,sinica,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,marenzelleri var. théeli,Deichmann,1938,Holothuria,Selenkothuria,theeli,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Selenkothuria,vittalonga,Cherbonnier,1988,Holothuria,Selenkothuria,vittalonga,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Stichopus,Gymnochirota,cinerascens,Brandt,1835,Holothuria,Semperothuria,cinerascens,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,pulchella,Selenka,1867,Holothuria,Semperothuria,cinerascens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,willeyi,Bedford,1899,Holothuria,Semperothuria,cinerascens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,flavo-maculata,Semper,1868,Holothuria,Semperothuria,flavomaculata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,fusco-coerulea,Théel,1886,Holothuria,Semperothuria,flavomaculata,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Semperothuria,granosa,Cherbonnier,1988,Holothuria,Semperothuria,granosa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,imitans,Ludwig,1875,Holothuria,Semperothuria,imitans,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Halodeima,,pseudo-imitans,Cherbonnier,1951,Holothuria,Semperothuria,imitans,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,imitans var. polymorpha,Caso,1962,Holothuria,Semperothuria,imitans,no,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,languens,Selenka,1867,Holothuria,Semperothuria,languens,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Semperothuria,roseomaculata,Kerr,2013,Holothuria,Semperothuria,roseomaculata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,surinamensis,Ludwig,1875,Holothuria,Semperothuria,surinamensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,aemula,Sluiter,1914,Holothuria,Stauropora,aemula,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,anulifera,Fisher,1907,Holothuria,Stauropora,anulifera,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,discrepans,Semper,1868,Holothuria,Stauropora,discrepans,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Dofleinii,Augustin,1908,Holothuria,Stauropora,dofleinii,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Mertensiothuria,canaliculata,Tan Tiu,1981,Holothuria,Stauropora,dofleinii,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Holothuria (tribus Holothuria),fuscocinerea,Jaeger,1833,Holothuria,Stauropora,fuscocinerea,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,curiosa,Ludwig,1875,Holothuria,Stauropora,fuscocinerea,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,hawaiiensis,Fisher,1907,Holothuria,Stauropora,hawaiiensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,mitis,Sluiter,1901,Holothuria,Stauropora,mitis,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,modesta,Ludwig,1875,Holothuria,Stauropora,modesta,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,sluiteri,Ludwig,1888,Holothuria,Stauropora,modesta,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,prompta,Koehler & Vaney,1908,Holothuria,Stauropora,modesta,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,olivacea,Ludwig,1888,Holothuria,Stauropora,olivacea,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,ludwigi,Lampert,1889,Holothuria,Stauropora,olivacea,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,fusco-olivacea,Fisher,1907,Holothuria,Stauropora,olivacea,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,pervicax,Selenka,1867,Holothuria,Stauropora,pervicax,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,depressa,Ludwig,1875,Holothuria,Stauropora,pervicax,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,mammiculata,Haacke,1880,Holothuria,Stauropora,pervicax,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,pluricuriosa,Deichmann,1937,Holothuria,Stauropora,pluricuriosa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,pseudo-zacae,Cherbonnier,1951,Holothuria,Stauropora,pluricuriosa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,exilis,Koehler & Vaney,1908,Holothuria,Stauropora?,exilis or pervicax,yes,yes/no,species inquirenda,no
+Aspidochirotida,Holothuriidae,Holothuria,Stichothuria,coronopertusa,Cherbonnier,1980,Holothuria,Stichothuria,coronopertusa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Theelothuria,asperita,Cherbonnier & Féral,1981,Holothuria,Theelothuria,asperita,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,cadelli,Bell,1887,Holothuria,Theelothuria,cadelli,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Theelothuria,duoturriforma ,Thandar,2007,Holothuria,Theelothuria,duoturriforma ,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Theelothuria,foresti,Cherbonnier & Féral,1981,Holothuria,Theelothuria,foresti,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,hamata,Pearson,1913,Holothuria,Theelothuria,hamata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,imperator,Deichmann,1930,Holothuria,Theelothuria,imperator,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,Klunzingeri,Lampert,1885,Holothuria,Theelothuria,klunzingeri,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,lamperti,Sluiter,1890,Holothuria,Theelothuria,kurti,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,kurti,Ludwig,1891,Holothuria,Theelothuria,kurti,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Theelothuria,longicosta,Thandar,2007,Holothuria,Theelothuria,longicosta,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,Michaelseni,Erwe,1913,Holothuria,Theelothuria,michaelseni,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,notabilis,Ludwig,1875,Holothuria,Theelothuria,notabilis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,paraprinceps,Deichmann,1937,Holothuria,Theelothuria,paraprinceps,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Bathyplotes,,velerones,Domantay,1961,Holothuria,Theelothuria,paraprinceps,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,princeps,Selenka,1867,Holothuria,Theelothuria,princeps,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Theelothuria,pseudonotabilis ,Thandar,2007,Holothuria,Theelothuria,pseudonotabilis ,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,spinifera,Théel,1886,Holothuria,Theelothuria,spinifera,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,squamifera,Semper,1868,Holothuria,Theelothuria,squamifera,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Theelothuria?,turriscelsa,Cherbonnier,1980,Holothuria,Theelothuria,turriscelsa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Theelothuria,viridia,Cherbonnier,1986,Holothuria,Theelothuria,turriscelsa,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,Thymiosycia,altaturricula,Cherbonnier & Féral,1984,Holothuria,Thymiosycia,altaturricula,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Sporadipus,Acolpos,maculatus,Brandt,1835,Holothuria,Thymiosycia,arenicola,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Brandtii,Selenka,1867,Holothuria,Thymiosycia,arenicola,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,humilis,Selenka,1867,Holothuria,Thymiosycia,arenicola,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,arenicola,Semper,1868,Holothuria,Thymiosycia,arenicola,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,monsuni,Heding,1939,Holothuria,Thymiosycia,arenicola,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Boutani,Hérouard,1893,Holothuria,Thymiosycia,arenicola boutani,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Thymiosycia,conusalba,Cherbonnier & Féral,1984,Holothuria,Thymiosycia,conusalba,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Labidodemas,,neglectum,Haacke,1880,Holothuria,Thymiosycia,decorata,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,decorata,Marenzeller von,1881,Holothuria,Thymiosycia,decorata,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Thymiosycia,decorata quattuoricava,Imaoka,1991,Holothuria,Thymiosycia,decorata quattuoricava,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,gracilis,Semper,1868,Holothuria,Thymiosycia,gracilis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Fistularia,,impatiens,Forsskål,1775,Holothuria,Thymiosycia,impatiens,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,fulva,Quoy & Gaimard,1834,Holothuria,Thymiosycia,impatiens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,ophidiana,Quoy & Gaimard,1834,Holothuria,Thymiosycia,impatiens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,botellus,Selenka,1867,Holothuria,Thymiosycia,impatiens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,impatiens var. concolor,Clark,1921,Holothuria,Thymiosycia,impatiens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,impatiens var. lutea,Clark,1921,Holothuria,Thymiosycia,impatiens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,impatiens var. pulchra,Clark,1921,Holothuria,Thymiosycia,impatiens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,impatiens var. bicolor,Clark,1938,Holothuria,Thymiosycia,impatiens,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,Hartmeyeri,Erwe,1913,Holothuria,Thymiosycia,macroperona,yes,no,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,macroperona,Clark,1938,Holothuria,Thymiosycia,macroperona,yes,yes,accepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,marginata,Sluiter,1901,Holothuria,Thymiosycia,marginata,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Thymiosycia,milloti,Cherbonnier,1988,Holothuria,Thymiosycia,milloti,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,minax,Théel,1886,Holothuria,Thymiosycia,minax,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,remollescens,Lampert,1885,Holothuria,Thymiosycia,remollescens,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,strigosa,Selenka,1867,Holothuria,Thymiosycia,strigosa,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Thymiosycia,thomasi,Pawson & Caycedo,1980,Holothuria,Thymiosycia,thomasi,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,truncata,Lampert,1885,Holothuria,Thymiosycia,truncata,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,unicolor,Selenka,1867,Holothuria,Thymiosycia,unicolor,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,Rathbunii,Lampert,1885,Holothuria,Thymiosycia,unicolor,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,densipedes,Clark,1900,Holothuria,Thymiosycia,unicolor,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Microthele,Paramicrothele,zihuatanensis,Caso,1965,Holothuria,Thymiosycia,zihuatanensis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,integra,Koehler & Vaney,1908,Holothuria,Vaneyothuria,integra,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,neozelanica,Mortensen,1925,Holothuria,Vaneyothuria,integra,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,lentiginosa,Marenzeller von,1892,Holothuria,Vaneyothuria,lentiginosa,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,Vaneyothuria,lentiginosa var. brasiliensis,Tommasi & de Oliveira,1976,Holothuria,Vaneyothuria,lentiginosa brasiliensis,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,lentiginosa enodis,Miller & Pawson,1979,Holothuria,Vaneyothuria,lentiginosa enodis,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,sinefibula,Cherbonnier,1964,Holothuria,Vaneyothuria,sinefibula,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,suspecta,Cherbonnier,1958,Holothuria,Vaneyothuria,suspecta,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,Vaneyothuria,unica,Rowe,1989,Holothuria,Vaneyothuria,unica,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,zacae,Deichmann,1937,Holothuria,Vaneyothuria,zacae,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Vaneyothuria,,zacae azacae,Deichmann,1958,Holothuria,Vaneyothuria,zacae azacae,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Vaneyothuria,,zacae iota,Deichmann,1958,Holothuria,Vaneyothuria,zacae iota,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Vaneyothuria,,zacae typica,Deichmann,1958,Holothuria,Vaneyothuria,zacae zacae,no,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,umbrina,Rüppel & Leuckart,1828,Holothuria,,hilla or difficilis or sanctori?,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,platei,Ludwig,1898,Holothuria,,platei,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,pyxoides,Ludwig,1888,Holothuria,,pyxoides,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Holothuria,,subditiva,Selenka,1867,Holothuria,,unicolor/surinamensis,yes,no and yes,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,aglutinata,Lesueur,1824,Holothuria,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,fasciata,Quoy & Gaimard,1834,Holothuria,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,Microthele,sordida,Brandt,1835,Holothuria,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,ondaatjei,Bell,1887,Holothuria,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,calcarea,Saville-Kent,1890,Holothuria,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Fistularia,,maxima,Forsskål,1775,Holothuria,,unidentified,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,albifasciata,Quoy & Gaimard,1834,Holothuria,,unidentified,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,maculata,Kuhl & van Hasselt,1869,Holothuria,,unidentified,yes,no,nomen dubium,no
+Aspidochirotida,Holothuriidae,Argiodia,,maculata var. tigris,Domantay,1933,Holothuria,,unidentified,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,fusco-cinerea var. philippinensis,Domantay,1933,Holothuria,,unidentified,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,pardalis var. cebuensis,Domantay,1933,Holothuria,,unidentified,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,saecularis var. forskali,Domantay,1953,Holothuria,,unidentified,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,Psolus,monacaria,Lesson,1830,Holothuria hilla or Actinopyga varians,,,suppressed,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,brunnea,Chamisso & Eysenhardt,1821,Holothuria?,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,marmorata,Saville-Kent,1893,Holothuria?,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,fasciata,Lesueur,1824,Holothuriidae,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,obscura,Lesueur,1824,Holothuriidae,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Labidodemas,,americanum,Deichmann,1938,Labidodemas,,americanum,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Irenothuria,,maccullochi,Deichmann,1958,Labidodemas,,maccullochi,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,pertinax,Ludwig,1875,Labidodemas,,pertinax,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Labidodemas,,pseudosemperianum,"Massin, Samyn & Thandar",2004,Labidodemas,,pseudosemperianum,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Labidodemas,,quadripartitum,"Massin, Samyn & Thandar",2004,Labidodemas,,quadripartitum,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,rugosa,Ludwig,1875,Labidodemas,,rugosum,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Holothuria,,triremis,Sluiter,1901,Labidodemas,,rugosum,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Labidodemas,,Semperianum,Selenka,1867,Labidodemas,,semperianum,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Labidodemas,,Selenkianum,Semper,1868,Labidodemas,,semperianum,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Labidodemas,,dubiosum,Ludwig,1875,Labidodemas,,semperianum,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Labidodemas,,egestosum,Sluiter,1901,Labidodemas,,semperianum,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,proceraspina,Cherbonnier,1967,Labidodemas,,semperianum,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Labidodemas,,spineum,"Massin, Samyn & Thandar",2004,Labidodemas,,spineum,yes,yes,accepted,yes
+Aspidochirotida,Holothuriidae,Stichopus,,Troschelii,Müller,1854,Pearsonothuria,,graeffei,yes,no/yes,unaccepted,candidate nomen oblitum
+Aspidochirotida,Holothuriidae,Holothuria,,Gräffei,Semper,1868,Pearsonothuria,,graeffei,yes,yes,accepted,
+Aspidochirotida,Holothuriidae,Bohadschia,,drachi,Cherbonnier,1954,Pearsonothuria,,graeffei,yes,no,unaccepted,no
+Aspidochirotida,Holothuriidae,Holothuria,,mamillata,Risso,1826,unidentifiable,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,heros,Agassiz,1852,unidentifiable,,unidentifiable,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,,monosticha,Haacke,1880,unidentifiable,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Ananus,,holothurioides,Sluiter,1880,unidentifiable,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,Bohadschia,inermis,Bell,1887,unidentifiable,,unidentifiable,yes,nomen dubium,nomen dubium,no
+Aspidochirotida,Holothuriidae,Holothuria,,fisheri,Domantay,1953,unidentified,,unidentified,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,,hawaiiensis var. benedicti,Domantay,1953,unidentified,,unidentified,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,,impatiens var. ludingae,Domantay,1953,unidentified,,unidentified,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,,lengtiginosa [sic] var. clarionensis,Domantay,1953,unidentified,,unidentified,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,,mortenseni,Domantay,1953,unidentified,,unidentified,nomen nudum,no,nomen nudum,no
+Aspidochirotida,Holothuriidae,Holothuria,,papillata var. galapagoensis,Domantay,1953,unidentified,,unidentified,nomen nudum,no,nomen nudum,no

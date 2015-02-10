@@ -13,7 +13,7 @@ Easy:
 sudo apt-get install git-core
 ```
 
-(to be adapted depending on the linux flavor you use)
+(to be adapted depending on the Linux flavor you use)
 
 ### Mac?
 
@@ -27,7 +27,7 @@ http://git-scm.com/downloads
 Download it from here: http://git-scm.com/downloads
 
 
-## Make sure git is installed, and let's take care of some business
+## Make sure git is installed, and introduce yourself to git
 
 ### Linux & Mac
 
@@ -38,7 +38,7 @@ which git
 ```
 
 If it doesn't say: `/usr/bin/git` or something close to this, or it doesn't
-return anything, something git isn't installed properly.
+return anything, git isn't installed properly.
 
 In your terminal, type:
 
@@ -59,6 +59,10 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 if it says `No such file or directory`, we'll create it in RStudio.
+
+It seems that using SSH on Mac doesn't work out of the box, so we are going to
+ask git to store our credentials so we don't have to enter them every time. To
+do so, follow [these instructions](https://help.github.com/articles/caching-your-github-password-in-git/#platform-mac)
 
 ### Windows
 

@@ -8,12 +8,13 @@ title: Challenges
 For this challenge, you are going to use what you have learned in the first few
 weeks to solve common issues when dealing with data, and perform a quick
 exploration of the dataset. I tried to build the questions so that if you get
-stuck at one point, you can move on to the following ones.
+stuck, you can move on to the following questions.
 
 I am providing you with two datasets:
+
 - `holothuriidae-specimens.csv` contains a list of sea cucumber specimens housed
-  at natural history museum across the United States. It's a simplification of a
-  dataset I obtained through the
+  at natural history museums across the United States. It's a simplification of
+  a dataset I obtained through the
   [iDigBio portal](https://www.idigbio.org/portal).
 - `holothuriidae-nomina-valid.csv` contains the list of currently accepted
   taxonomic names for sea cucumbers.
@@ -24,6 +25,7 @@ of them, the specimens haven't been examined in many years and may be identified
 with a taxonomic name that is not currently valid.
 
 Before we get started, let's get organized:
+
 1. Start RStudio, and create a new project (File > New Project)
 1. Choose "New Directory" and "Empty Project"
 1. Call your Directory "cuke-challenge" and place it wherever is convenient for

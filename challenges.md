@@ -65,22 +65,23 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
    where the specimens are housed:
    - How many institutions house specimens?
    - Draw a bar plot that shows the contribution of each institution
-1. When was the oldest specimen included in this data frame collected? (hint: It
-   was not in year 1)
-1. What proportion of the specimens in this data frame were collected between
-   the years 2006 and 2014 (included)?
+1. The column `dwc.year` indicates when the specimen was collected:
+   - When was the oldest specimen included in this data frame collected ? (hint:
+     It was not in year 1)
+   - What proportion of the specimens in this data frame were collected between
+     the years 2006 and 2014 (included)?
 1. The function `nzchar()` on a vector returns `TRUE` for the positions of the
    vectors that are not empty, and `FALSE` otherwise. For instance,
    `nzchar(c("a", "b", "", "", "e"))` would return the vector `c(TRUE, TRUE,
-   FALSE, FALSE, TRUE). The column `dwc.class` is supposed to contain the Class
+   FALSE, FALSE, TRUE)`. The column `dwc.class` is supposed to contain the Class
    information for the specimens (here they should all be
    "Holothuroidea"). However, it is missing for some. Use the function `nzchar`
    to answer:
    - How many specimens do not have the information for class listed?
    - For the specimens where the information is missing, replace it with the
      information for their (again, they should all be "Holothuroidea").
-1. Using the `nom` data frame, and the column `Subgenus.current`, which
-   of the genera listed has/have subgenera?
+1. Using the `nom` data frame, and the columns `Subgenus.current` and
+   `Genus.current`, which of the genera listed has/have subgenera?
 1. We want to combine the information included in the `nom` and the `hol`
   spreadsheets, to identify the specimens in the data frame that use species
   names that are not valid. We'll do this using the function `merge()`. By
@@ -97,6 +98,108 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
   - Use `merge()` to combine `hol` and `nom` (hint: you will need to use the
     `all.x` argument, read the help to figure it out, and check that the
     resulting data frame has the same number of rows as `hol`).
-  - How many specimens are identified with a currently invalid species name?
-    (hint: specimens identified only with a genus name shouldn't be included in
-    this count?)
+  - Create a data frame that contains the information for the specimens
+    identified with an invalid species name (content of the column `Status` is
+    not `NA`)? (hint: specimens identified only with a genus name shouldn't be
+    included in this count.)
+  - Select only the columns: `idigbio.uuid`, `dwc.genus`, `dwc.specificEpithet`,
+    `dwc.institutionCode`, `dwc.catalogNumber` from this data frame and export
+    the data as a CSV file (using the function `write.csv`) named
+    `holothuriidae-invalid.csv`
+
+
+<!---
+
+
+```r
+## How many specimens?
+nrow(hol)
+```
+
+```
+## [1] 2984
+```
+
+```r
+## How many institutions house specimens?
+length(unique(hol$dwc.institutionCode))
+```
+
+```
+## [1] 4
+```
+
+```r
+## Barplot that shows the contribution of each institution:
+barplot(table(hol$dwc.institutionCode))
+```
+
+![plot of chunk answers](figure/answers-1.png) 
+
+```r
+## When was the oldest specimen collected?
+min(hol$dwc.year[hol$dwc.year > 1700], na.rm=TRUE)
+```
+
+```
+## [1] 1902
+```
+
+```r
+## What is the proportion of speicmens collected between 2006 and 2014
+sum(hol$dwc.year >= 2006 & hol$dwc.year <= 2014, na.rm=TRUE)/nrow(hol) # for all specimens
+```
+
+```
+## [1] 0.4932976
+```
+
+```r
+sum(hol$dwc.year >= 2006 & hol$dwc.year <= 2014, na.rm=TRUE)/sum(!is.na(hol$dwc.year)) # for all specimens with a year
+```
+
+```
+## [1] 0.6986236
+```
+
+```r
+## How many specimens are missing the "Class" data?
+sum(!nzchar(hol$dwc.class))
+```
+
+```
+## [1] 50
+```
+
+```r
+## Add the missing data
+hol$dwc.class[!nzchar(hol$dwc.class)] <- "Holothuroidea"
+
+## Which of the genera listed have subgenera?
+unique(nom$Genus.current[nzchar(nom$Subgenus.current)])
+```
+
+```
+## [1] "Holothuria"
+```
+
+```r
+## Combine the two data frames
+hol[["genus_species"]] <- paste(hol$dwc.genus, hol$dwc.specificEpithet)
+nom[["genus_species"]] <- paste(nom$Genus.current, nom$species.current)
+hol_combined <- merge(hol, nom, all.x=TRUE)
+nrow(hol_combined) == nrow(hol)
+```
+
+```
+## [1] TRUE
+```
+
+```r
+## How many specimens are identified with currently invalid species names?
+hol_invalid <- subset(hol_combined, is.na(Status) & nzchar(dwc.specificEpithet))
+write.csv(hol_invalid[, c("idigbio.uuid", "dwc.genus", "dwc.specificEpithet", "dwc.institutionCode", "dwc.catalogNumber")],
+          file="holothuriidae-invalid.csv", row.names=FALSE)
+```
+
+--->

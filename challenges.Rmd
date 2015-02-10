@@ -24,19 +24,19 @@ quite messy as it gathers information across several institutions, and for some
 of them, the specimens haven't been examined in many years and may be identified
 with a taxonomic name that is not currently valid.
 
-Before we get started, let's get organized:
+Before we get started, let's get organized. This time, you will each work within
+your own GitHub repository. I already created them for you but they are empty.
 
 1. Start RStudio, and create a new project (File > New Project)
-1. Choose "New Directory" and "Empty Project"
-1. Call your Directory "cuke-challenge" and place it wherever is convenient for
-   you on your hardrive.
-1. Check the box "Create a git repository" before clicking the button "Create
-   Project".
+1. Choose "Version Control", and then "Git"
+1. In repository URL type: `https://github.com/r-bio/challenges-yourfirstname`
+   (e.g., mine is `https://github.com/r-bio/challenges-francois`) and choose a
+   convenient location on your hardrive.
 1. Create a new folder inside your working directory called `data`. You can do
    this using the "New Folder" icon in the File panel in RStudio or by typing
    `dir.create("data")` at the R console.
 1. Create a new script file (File > New File > R script) and save it as
-   `cuke-challenge.R`
+   `cuke-challenge-firstname.R`
 
 Now, download the two data files inside your newly created `data` folder by
 typing in your script file:
@@ -48,7 +48,25 @@ download.file("http://r-bio.github.io/data/holothuriidae-nomina-valid.csv",
               "data/holothuriidae-nomina-valid.csv")
 ```
 
-and use the function `read.csv()` to load these datasets in memory. We'll call
+Save your script, and click on the Git icon below the menu, and choose
+"Commit". Check the boxes in the "Staged" column for the all the files and write
+a commit message such as "add data". Click on the "Commit" button, and then the
+"Push" icon. At least for me, at this stage I get an error message saying:
+
+`error: unable to read askpass response from 'rpostback-askpass'`
+
+This is apparently a known bug of RStudio (that I hope will be fixed soon). If
+you get it, close the "Review Changes" window, and in RStudio, in the menu go to
+Tools > Shell. There type:
+
+`git push -u origin master`
+
+it might ask for your GitHub username and password. Once it's done, we won't
+have to do this again and will be able to use the RStudio interface directly. If
+you have any problem at this stage, open an issue in the "logistics" repository
+and I'll try to help you.
+
+Now use the function `read.csv()` to load these datasets in memory. We'll call
 `hol` the data frame that contains the information about the specimens, and
 `nom` the data frame that contains the information about the validity of the
 species names.
@@ -105,6 +123,9 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
     the data as a CSV file (using the function `write.csv`) named
     `holothuriidae-invalid.csv`
 
+Once you are done, commit your script to your repository:
+Git icon > "Commit", check the box next to the file name for your script, add a
+message, click on the Commit button and then on the push button.
 
 <!---
 

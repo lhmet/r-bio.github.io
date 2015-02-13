@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Functions and control flow
+title: 05 -- Functions and control flow
 ---
 
 # Goals
@@ -217,6 +217,7 @@ of the plot optional.
 1. This is nice... but it only plot the first replicate. How can we modify the
 function so that all replicates are being plotted? You need to use the function `lines()`
 
+hint:
 
 ```r
 sim_brownian <- function(ngen=10, nrep=10, sd) {
@@ -244,6 +245,11 @@ sim_brownian <- function(ngen=10, nrep=10, sd) {
 ```
 
 # Step 6: Let's fix the y-axis
+
+We need to identify the minimum and maximum values across all replicates.
+
+Using `plot(..., type="n")` draws an empty plot which is useful to subsequently
+draw multiple lines (or other low level functions).
 
 
 ```r

@@ -1,0 +1,550 @@
+---
+layout: page
+title: Functions and control flow
+---
+
+# Goals
+
+We are going to build Brownian motion simulator. The idea is simple, start from
+a given value (here 0), and at each generation, add a random value drawn from a
+normal distribution. It's a commonly used approximation to model ecological and
+evolutionary processes. Over time, the value is going on a "random walk".
+
+The function we are going to write won't be particularly elegant or efficient
+but will illustrate key programming concepts:
+- how to write functions?
+- how do conditional statements work?
+- how do `for` loops work?
+
+We will also use this example to get familiar with basic plotting functions.
+
+# Step 1: Let's write a basic function
+
+
+```r
+sim_brownian <- function() {
+    seq_len(10)
+}
+```
+
+The curly brackets delimit the begining and the end of the function. More
+generally, the curly brackets delimit a chunk of code that is meaningful in
+itself.
+
+with an argument:
+
+
+```r
+sim_brownian <- function(ngen) {
+    seq_len(ngen)
+}
+```
+
+with an argument and a default value:
+
+
+```r
+sim_brownian <- function(ngen=10) {
+    seq_len(ngen)
+}
+```
+
+# Step 2: Let's add a `for` loop
+
+
+```r
+sim_brownian <- function(ngen=10) {
+    for (j in seq_len(ngen)) {
+        message("j is equal to ", j)
+    }
+}
+```
+
+
+```r
+sim_brownian <- function(ngen=10) {
+
+    ## create a vector to hold the results
+    tmp_gen <- numeric(ngen)
+
+    for (j in seq_len(ngen)) {
+        message("j is equal to ", j)
+        tmp_gen[j] <- j * 2
+        message("tmp_gen[j] is equal to ", tmp_gen[j])
+    }
+    tmp_gen
+}
+```
+
+The function `rnorm()` draws random numbers from a Normal distribution. For
+instance, `rnorm(1, mean=2, sd=3)` draws 1 number from a Normal distribution
+with a mean 2 (default=0) and a standard deviation of 3 (default=1).
+
+So let's modify our loop so that the vector we return holds the previous value +
+a random value drawn from a Normal distribution:
+
+
+```r
+sim_brownian <- function(ngen=10) {
+
+    ## create a vector to hold the results
+    tmp_gen <- numeric(ngen)
+
+    for (j in seq_len(ngen)) {
+        message("j is equal to ", j)
+        tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1)
+        message("tmp_gen[j] is equal to ", tmp_gen[j])
+    }
+    tmp_gen
+}
+```
+
+Oops... it's not working. Why?
+
+# Step 3: Let's fix the problem
+
+We need to tell our function that it needs to treat the first element of our
+vector differently that the rest of it. That's where conditional statements come
+to the rescue.
+
+In plain English, we would say, "if this is the first element, give it the value
+0, else give it the previous value + a value drawn from a Normal
+distribution".
+
+In R these are written like this:
+
+```
+if (a condition) {
+	what to do if the condition is true
+} else {
+	what to do if the condition is false
+}
+```
+
+let's modify our function:
+
+
+```r
+sim_brownian <- function(ngen=10) {
+
+    ## create a vector to hold the results
+    tmp_gen <- numeric(ngen)
+
+    for (j in seq_len(ngen)) {
+        message("j is equal to ", j)
+        if (j == 1) {
+            tmp_gen[j] <- 0
+        } else {
+            tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1)
+        }
+        message("tmp_gen[j] is equal to ", tmp_gen[j])
+    }
+    tmp_gen
+}
+```
+
+## Challenge
+
+Modify the function so that the user can specify the standard deviation of the
+Normal distribution from which the random number is drawn from.
+
+# Step 4: Let's add some replicates
+
+Because this is an illustration of a random process, if we want to understand
+and visualize the impact of changing the standard deviation on the simulations,
+we need to generate replicates under the same conditions.
+
+To do so, we are going to use nested loops. We are going to use a first loop to
+create our replicates, and within each replicates, another loop to simulate the
+random walk (just like before).
+
+
+```r
+sim_brownian <- function(ngen=10, nrep=10, sd) {
+
+    ## create an empty list to store each replicate
+    rep_lst <- vector("list", nrep)
+
+    for (i in seq_len(nrep)) {
+        ## create a vector to hold the results
+        tmp_gen <- numeric(ngen)
+        for (j in seq_len(ngen)) {
+            if (j == 1) {
+                tmp_gen[j] <- 0
+            } else {
+                tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1, sd=sd)
+            }
+        }
+        rep_lst[[i]] <- tmp_gen
+    }
+    rep_lst
+}
+```
+
+# Step 5: Let's plot these simulations
+
+
+```r
+sim_brownian <- function(ngen=10, nrep=10, sd) {
+
+    ## create an empty list to store each replicate
+    rep_lst <- vector("list", nrep)
+
+    for (i in seq_len(nrep)) {
+        ## create a vector to hold the results
+        tmp_gen <- numeric(ngen)
+        for (j in seq_len(ngen)) {
+            if (j == 1) {
+                tmp_gen[j] <- 0
+            } else {
+                tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1, sd=sd)
+            }
+        }
+        rep_lst[[i]] <- tmp_gen
+    }
+
+    plot(seq_len(ngen), rep_lst[[1]], type="l")
+
+    rep_lst
+}
+```
+
+## Challenge
+
+1. Add another argument to your function (call it `draw.plot`) to make the drawing
+of the plot optional.
+1. This is nice... but it only plot the first replicate. How can we modify the
+function so that all replicates are being plotted? You need to use the function `lines()`
+
+
+```r
+sim_brownian <- function(ngen=10, nrep=10, sd) {
+
+    ## create an empty list to store each replicate
+    rep_lst <- vector("list", nrep)
+
+    for (i in seq_len(nrep)) {
+        ## create a vector to hold the results
+        tmp_gen <- numeric(ngen)
+        for (j in seq_len(ngen)) {
+            if (j == 1) {
+                tmp_gen[j] <- 0
+            } else {
+                tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1, sd=sd)
+            }
+        }
+        rep_lst[[i]] <- tmp_gen
+    }
+
+    plot(seq_len(ngen), rep_lst[[1]], type="l")
+    lines(seq_len(ngen), rep_lst[[2]])
+    rep_lst
+}
+```
+
+# Step 6: Let's fix the y-axis
+
+
+```r
+sim_brownian <- function(ngen=100, nrep=10, sd=1, draw.plot=TRUE) {
+
+    rep_lst <- vector("list", nrep)
+
+    for (i in seq_len(nrep)) {
+        tmp_gen <- numeric(ngen)
+        for (j in seq_len(ngen)) {
+            if (j == 1) {
+                tmp_gen[j] <- 0
+            } else {
+                tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1, sd=sd)
+            }
+        }
+        rep_lst[[i]] <- tmp_gen
+    }
+
+    if (draw.plot) {
+        max_y <- max(sapply(rep_lst, max))
+        min_y <- min(sapply(rep_lst, min))
+        plot(seq_len(ngen), rep_lst[[1]], lwd=2, type="n",
+             ylim=c(min_y, max_y))
+
+        for (i in seq_len(nrep)) {
+            lines(seq_len(ngen), rep_lst[[i]])
+        }
+    }
+
+    rep_lst
+}
+```
+
+# Step 7: Let's make it prettier
+
+
+```r
+sim_brownian <- function(ngen=100, nrep=10, sd=1, draw.plot=TRUE) {
+
+    rep_lst <- vector("list", nrep)
+
+    for (i in seq_len(nrep)) {
+        tmp_gen <- numeric(ngen)
+        for (j in seq_len(ngen)) {
+            if (j == 1) {
+                tmp_gen[j] <- 0
+            } else {
+                tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1, sd=sd)
+            }
+        }
+        rep_lst[[i]] <- tmp_gen
+    }
+
+    if (draw.plot) {
+        max_y <- max(sapply(rep_lst, max))
+        min_y <- min(sapply(rep_lst, min))
+        plot(seq_len(ngen), rep_lst[[1]], lwd=2, type="n",
+             ylim=c(min_y, max_y))
+
+        for (i in seq_len(nrep)) {
+            lines(seq_len(ngen), rep_lst[[i]], col="gray")
+        }
+    }
+
+    rep_lst
+}
+```
+
+## Challenge
+
+1. Use  `if/else` so that the last line is drawn using a different color (e.g., "red")
+1. Add two arguments to the function, so the user can specify the color s/he
+would like for their lines (one argument for the color of the last line
+`main.col` and an argument for the other lines `bg.col`).
+
+Let's use the `...` to specify the labels:
+
+
+```r
+sim_brownian <- function(ngen=100, nrep=10, sd=1, draw.plot=TRUE, ...) {
+
+    rep_lst <- vector("list", nrep)
+
+    for (i in seq_len(nrep)) {
+        tmp_gen <- numeric(ngen)
+        for (j in seq_len(ngen)) {
+            if (j == 1) {
+                tmp_gen[j] <- 0
+            } else {
+                tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1, sd=sd)
+            }
+        }
+        rep_lst[[i]] <- tmp_gen
+    }
+
+    if (draw.plot) {
+        max_y <- max(sapply(rep_lst, max))
+        min_y <- min(sapply(rep_lst, min))
+        plot(seq_len(ngen), rep_lst[[1]], lwd=2, type="n",
+             ylim=c(min_y, max_y), ...)
+
+        for (i in seq_len(nrep)) {
+            lines(seq_len(ngen), rep_lst[[i]], col="gray")
+        }
+    }
+
+    rep_lst
+}
+```
+
+# Step 8: Let's make it a little safer
+
+This might be unlikely to occur (maybe you are using the function as part of
+your workflow and calling it from another function that has a bug in it), but
+what would happen if you tried to use the function using `nrep=0`? How about the
+number of generations?
+
+
+```r
+sim_brownian(nrep=0)
+```
+
+```
+## Error in max(sapply(rep_lst, max)): invalid 'type' (list) of argument
+```
+
+```r
+sim_brownian(ngen=0)
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## -Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Inf
+```
+
+```
+## Warning in min(x): no non-missing arguments to min; returning Inf
+```
+
+```
+## Warning in max(x): no non-missing arguments to max; returning -Inf
+```
+
+```
+## Error in plot.window(...): need finite 'xlim' values
+```
+
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png) 
+
+Hmm... not so clear what the issue is. Let's create an error message that is
+going to be a little more informative in this case.
+
+Also, we may want to warn the user that if less than 10 replicates are used, the
+values taken are not going to be very representative of the possible range.
+
+
+
+```r
+sim_brownian <- function(ngen=100, nrep=10, main.col="red", bg.col="gray50", sd=1, draw.plot=TRUE, ...) {
+
+    if (nrep < 1) {
+        stop("We need at least one replicate.")
+    }
+
+    if (ngen < 2) {
+        stop("We need at least 2 generations.")
+    }
+
+    if (nrep < 10)  {
+        warning("With less than 10 replicates, the possible range of values may not be very representative.")
+    }
+
+    rep_lst <- vector("list", nrep)
+
+    for (i in seq_len(nrep)) {
+        tmp_gen <- numeric(ngen)
+        for (j in seq_len(ngen)) {
+            if (j == 1) {
+                tmp_gen[j] <- 0
+            } else {
+                tmp_gen[j] <- tmp_gen[j - 1] + rnorm(1, sd=sd)
+            }
+        }
+        rep_lst[[i]] <- tmp_gen
+    }
+
+    if (draw.plot) {
+        max_y <- max(sapply(rep_lst, max))
+        min_y <- min(sapply(rep_lst, min))
+        plot(seq_len(ngen), rep_lst[[1]], col=main.col, lwd=2, type="n",
+             ylim=c(min_y, max_y), ...)
+
+        for (i in seq_len(nrep)) {
+            if (i == max(nrep)) {
+                lines(seq_len(ngen), rep_lst[[i]], col=main.col, lwd=2)
+            } else {
+                lines(seq_len(ngen), rep_lst[[i]], col=bg.col)
+            }
+        }
+    }
+
+    return(rep_lst)
+}
+```
+
+# Things we didn't cover but need to
+
+* scoping
+* `match.arg`

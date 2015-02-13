@@ -356,7 +356,7 @@ number of generations?
 
 ```{r}
 sim_brownian(nrep=0)
-sim_brownian(ngen=0)
+sim_brownian(ngen=0, nrep=1, plot=FALSE)
 ```
 
 Hmm... not so clear what the issue is. Let's create an error message that is
@@ -368,7 +368,8 @@ values taken are not going to be very representative of the possible range.
 
 ```{r}
 
-sim_brownian <- function(ngen=100, nrep=10, main.col="red", bg.col="gray50", sd=1, draw.plot=TRUE, ...) {
+sim_brownian <- function(ngen=100, nrep=10, main.col="red",
+                         bg.col="gray50", sd=1, draw.plot=TRUE, ...) {
 
     if (nrep < 1) {
         stop("We need at least one replicate.")
@@ -379,7 +380,8 @@ sim_brownian <- function(ngen=100, nrep=10, main.col="red", bg.col="gray50", sd=
     }
 
     if (nrep < 10)  {
-        warning("With less than 10 replicates, the possible range of values may not be very representative.")
+        warning("With less than 10 replicates, the possible range of",
+                "values may not be very representative.")
     }
 
     rep_lst <- vector("list", nrep)

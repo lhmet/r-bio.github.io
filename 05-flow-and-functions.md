@@ -371,106 +371,16 @@ sim_brownian(nrep=0)
 ```
 
 ```r
-sim_brownian(ngen=0)
+sim_brownian(ngen=0, nrep=1, plot=FALSE)
 ```
 
 ```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
+## Warning in FUN(X[[1L]], ...): no non-missing arguments to max; returning
 ## -Inf
 ```
 
 ```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to max; returning
-## -Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
-## Inf
-```
-
-```
-## Warning in FUN(X[[10L]], ...): no non-missing arguments to min; returning
+## Warning in FUN(X[[1L]], ...): no non-missing arguments to min; returning
 ## Inf
 ```
 
@@ -480,6 +390,10 @@ sim_brownian(ngen=0)
 
 ```
 ## Warning in max(x): no non-missing arguments to max; returning -Inf
+```
+
+```
+## Warning in plot.window(...): "plot" is not a graphical parameter
 ```
 
 ```
@@ -497,7 +411,8 @@ values taken are not going to be very representative of the possible range.
 
 
 ```r
-sim_brownian <- function(ngen=100, nrep=10, main.col="red", bg.col="gray50", sd=1, draw.plot=TRUE, ...) {
+sim_brownian <- function(ngen=100, nrep=10, main.col="red",
+                         bg.col="gray50", sd=1, draw.plot=TRUE, ...) {
 
     if (nrep < 1) {
         stop("We need at least one replicate.")
@@ -508,7 +423,8 @@ sim_brownian <- function(ngen=100, nrep=10, main.col="red", bg.col="gray50", sd=
     }
 
     if (nrep < 10)  {
-        warning("With less than 10 replicates, the possible range of values may not be very representative.")
+        warning("With less than 10 replicates, the possible range of",
+                "values may not be very representative.")
     }
 
     rep_lst <- vector("list", nrep)

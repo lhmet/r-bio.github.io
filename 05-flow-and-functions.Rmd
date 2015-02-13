@@ -12,6 +12,7 @@ evolutionary processes. Over time, the value is going on a "random walk".
 
 The function we are going to write won't be particularly elegant or efficient
 but will illustrate key programming concepts:
+
 - how to write functions?
 - how do conditional statements work?
 - how do `for` loops work?
@@ -355,7 +356,7 @@ what would happen if you tried to use the function using `nrep=0`? How about the
 number of generations?
 
 ```{r}
-sim_brownian(nrep=0)
+sim_brownian(nrep=0, plot=FALSE)
 sim_brownian(ngen=0, nrep=1, plot=FALSE)
 ```
 
@@ -380,8 +381,8 @@ sim_brownian <- function(ngen=100, nrep=10, main.col="red",
     }
 
     if (nrep < 10)  {
-        warning("With less than 10 replicates, the possible range of",
-                "values may not be very representative.")
+        warning("With less than 10 replicates, the possible range",
+                "of values may not be very representative.")
     }
 
     rep_lst <- vector("list", nrep)
@@ -401,12 +402,13 @@ sim_brownian <- function(ngen=100, nrep=10, main.col="red",
     if (draw.plot) {
         max_y <- max(sapply(rep_lst, max))
         min_y <- min(sapply(rep_lst, min))
-        plot(seq_len(ngen), rep_lst[[1]], col=main.col, lwd=2, type="n",
-             ylim=c(min_y, max_y), ...)
+        plot(seq_len(ngen), rep_lst[[1]], col=main.col, lwd=2,
+             type="n", ylim=c(min_y, max_y), ...)
 
         for (i in seq_len(nrep)) {
             if (i == max(nrep)) {
-                lines(seq_len(ngen), rep_lst[[i]], col=main.col, lwd=2)
+                lines(seq_len(ngen), rep_lst[[i]], col=main.col,
+                      lwd=2)
             } else {
                 lines(seq_len(ngen), rep_lst[[i]], col=bg.col)
             }

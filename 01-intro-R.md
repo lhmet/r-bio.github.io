@@ -167,6 +167,7 @@ x
 ```
 
 Two things:
+
 - we overwrote the content of `x`
 - `x` now contains 3 elements
 

@@ -7,7 +7,7 @@ author: François Michonneau
 
 ## What is version control?
 
-![A better backup](http://www.phdcomics.com/comics/archive/phd101212s.gif)
+![A better backup](http://www.phdcomics.com/comics/archive/phd101212s.gif) (from phdcomics.com)
 
 You know that great paper you just wrote, you were done with it, so you called
 it "final". And then, you sent it to your advisor for her last comments. So you
@@ -87,7 +87,9 @@ repository on GitHub, you will need to **pull** to bring their modifications
 into your local copy of the repository.
 
 Commits are cheap. Commit often and provide useful messages so you can keep
-track of what you are doing.
+track of what you are doing. Don't do this:
+
+![](http://imgs.xkcd.com/comics/git_commit.png) (From xkcd.com)
 
 ## Branching
 
@@ -97,8 +99,8 @@ if you like what you are doing you can **merge** these modifications back into
 your project.
 
 Branching is particularly important with Git as it is the mechanism that is used
-heavily when you are collaborating to external projects (projects you are not
-directly involved with).
+ when you are collaborating to external projects (projects you are not directly
+ involved with).
 
 RStudio can't create branches directly, so you need to either:
 

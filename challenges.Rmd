@@ -95,7 +95,7 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
    to answer:
    - How many specimens do not have the information for class listed?
    - For the specimens where the information is missing, replace it with the
-     information for their (again, they should all be "Holothuroidea").
+     information for their class (again, they should all be "Holothuroidea").
 1. Using the `nom` data frame, and the columns `Subgenus.current` and
    `Genus.current`, which of the genera listed has/have subgenera?
 1. We want to combine the information included in the `nom` and the `hol`
@@ -123,9 +123,9 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
     the data as a CSV file (using the function `write.csv`) named
     `holothuriidae-invalid.csv`
 
-Once you are done, commit your script to your repository:
-Git icon > "Commit", check the box next to the file name for your script, add a
-message, click on the Commit button and then on the push button.
+Once you are done, commit your script to your repository: Git icon > "Commit",
+check the box next to the file name for your script, add a message, click on the
+Commit button and then on the "push" button.
 
 <!---
 

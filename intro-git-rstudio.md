@@ -111,10 +111,109 @@ RStudio can't create branches directly, so you need to either:
 ## Pull requests
 
 With a **pull request** you are asking someone who maintains a repository to
-pull your changes into their repository. I'll demonstrate the process in class.
+pull your changes into their repository.
+
+To issue a pull request:
+
+1. First, you need a copy of the repository that contains the code you want to
+   improve. To do so, you will **fork** it from its original location. You will
+   also need to tell Git that this a copy of another project (a.k.a.,
+   **upstream**)
+2. You need to import the code onto your computer. To do so, you will **clone**
+   your fork to your computer.
+3. Now that the code is on your computer, you can edit and modify it. Once you
+   are done you can **push** it to your repository.
+4. Once the code is in your repository, you can issue a pull request so the
+   original owner of the code (**upstream**) can review, comment, accept (or
+   reject) your proposed modifications.
+5. At some point, you will need to **pull** changes that occur upstream into
+   your own repository if you want to keep contributing to the project.
+
+How to do this using RStudio and GitHub?
+
+1. Go to the repository page on GitHub for the project you would like to
+   improve, and click on the "Fork" button in the top right corner.
+   ![the GitHub fork button]({{ site.baseurl }}img/fork-button.png)
+   This will create a copy of the repository in your GitHub account. For
+   instance, if I fork `https://github.com/r-bio/challenges-francois`, it will
+   create a copy at `https://github.com/fmichonneau/challenges-francois`.
+1. In RStudio, go to File > New Project, and choose "Version Control", select
+   "Git", and type the repository URL found in _your_ copy of the repository
+   listed in the right column on the GitHub website.
+   ![the HTTPS address for the GitHub repository]({{ site.baseurl }}img/https-url.png)
+   In our example this would be
+   `https://github.com/fmichonneau/challenges-francois`, and choose an
+   appropriate location on your hard-drive to store the project.
+1. After a few seconds, the content of the repository should appear in the
+   "Files" pane in RStudio.
+1. At this point, we need to tell Git that this project has an upstream
+   version. There is no way of doing this within RStudio, so you need to enter
+   some commands in the shell. Go to Tools > Shell, and enter the address of the
+   upstream repository (in our example
+   `https://github.com/r-bio/challenges-francois`):
+
+       `git remote add upstream https://github.com/r-bio/challenges-francois`
+
+	Make sure that it worked by typing `git remote -v`, it should display 4
+   lines, 2 that start with `origin` and the address of your fork, and 2 that
+   start with `upstream` and the address of the upstream repository.  Note that
+   here we used `upstream` to name the upstream repository but we could have
+   given it another name. In this case, `upstream` is just easy to remember and
+   accurate. Keep your shell window open.
+1. We are now going to create a **branch** for our changes so they are
+   self-contained. There is also no way to do this within RStudio so we are
+   going to enter additional commands in the shell to create it:
+
+		`git checkout -b proposed-fixes master`
+
+	Here, `proposed-fixes` is an arbitrary name we give to our branch. Ideally,
+    you want to choose a name that summarize what your proposed changes are
+    about. After seeing the message `Switched to a new branch...`, you can close
+    the shell window.
+1. Open the script you would like to modify, and change the code as needed. Save
+   your modifications.
+1. When you are done, commit your changes:
+   ![Commit in RStudio]({{ site.baseurl }}img/rstudio-commit.png)
+   Click the staged checkbox for the files that are affected by the
+   modifications you want to commit to your repository:
+   ![Staged changes in RStudio]({{ site.baseurl }}img/rstudio-staged.png)
+   Make sure that you are in the correct branch, (`proposed-fixes` appears next
+   to the History button), and write a commit message: The first line should be short (< 50 characters),
+   additional details can be given after skipping a line:
+   ![Example commit message in RStudio]({{ site.baseurl }}img/rstudio-commit-message.png)
+   Close the window, and go back to the shell. There, type:
+
+     `git push origin proposed-fixes`
+
+	This command sends your modification to your fork on GitHub.
+
+1. Go to GitHub to view your fork, in our example that would be:
+   `https://github.com/fmichonneau/challenges-francois`, and click on the green
+   icon:
+   ![The 'Compare' icon in GitHub]({{ site.baseurl }}img/github-branch.png)
+1. Make sure that the correct branch is selected in the `compare` drop-down menu
+   in the top right, and click on the green button: "Create pull request".
+1. Leave a message with some explanation for your proposed changes and
+   suggestions and click on the green button "Create Pull Request". This will
+   send a notification to the owner of the repository who will review your
+   request.
+
+### What to do if you receive a pull request?
+
+If you want to accept the pull request, you can click on the "Merge pull
+request" button in your repository, and after adding an optional comment, click
+again on the "Accept pull request" button.
+
+After that, you need to import (pull) these changes into your local copy of the
+repository. You should be able to do pull the changes by clicking on "Pull
+branches" in the "Git" menu of your R project in RStudio.
+
 
 ## Exploring further
 
 There are many resources on the web to learn about Git and GitHub. An excellent
 (but maybe too comprehensive for beginners) is the
-[Pro Git Book](http://git-scm.com/book/en/v2).
+[Pro Git Book](http://git-scm.com/book/en/v2). This chapter is great to learn
+how to use
+[GitHub](http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) to
+contribute to a project.

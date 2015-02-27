@@ -1,6 +1,6 @@
 ---
 layout: page
-title: A more advanced function, and introduction to Rmarkdown
+title: 06 - More advanced functions, and introduction to Rmarkdown
 ---
 
 
@@ -194,6 +194,7 @@ inside your `data_output` folder.
 We are now ready to write our paper about the sea cucumber fauna of the Red Sea.
 
 Also make sure that you have the following packages installed:
+
 1. ggplot2
 1. maps
 1. knitr

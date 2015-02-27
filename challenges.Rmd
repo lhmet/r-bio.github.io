@@ -116,7 +116,7 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
     resulting data frame has the same number of rows as `hol`).
   - Create a data frame that contains the information for the specimens
     identified with an invalid species name (content of the column `Status` is
-    not `NA`)? (hint: specimens identified only with a genus name shouldn't be
+    `NA`)? (hint: specimens identified only with a genus name shouldn't be
     included in this count.)
   - Select only the columns: `idigbio.uuid`, `dwc.genus`, `dwc.specificEpithet`,
     `dwc.institutionCode`, `dwc.catalogNumber` from this data frame and export
@@ -127,7 +127,7 @@ Once you are done, commit your script to your repository: Git icon > "Commit",
 check the box next to the file name for your script, add a message, click on the
 Commit button and then on the "push" button.
 
-<!---
+### Answers
 
 ```{r answers}
 ## How many specimens?
@@ -166,5 +166,3 @@ hol_invalid <- subset(hol_combined, is.na(Status) & nzchar(dwc.specificEpithet))
 write.csv(hol_invalid[, c("idigbio.uuid", "dwc.genus", "dwc.specificEpithet", "dwc.institutionCode", "dwc.catalogNumber")],
           file="holothuriidae-invalid.csv", row.names=FALSE)
 ```
-
---->

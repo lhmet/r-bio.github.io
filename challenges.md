@@ -97,7 +97,7 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
    to answer:
    - How many specimens do not have the information for class listed?
    - For the specimens where the information is missing, replace it with the
-     information for their (again, they should all be "Holothuroidea").
+     information for their class (again, they should all be "Holothuroidea").
 1. Using the `nom` data frame, and the columns `Subgenus.current` and
    `Genus.current`, which of the genera listed has/have subgenera?
 1. We want to combine the information included in the `nom` and the `hol`
@@ -118,18 +118,18 @@ nom <- read.csv(file="data/holothuriidae-nomina-valid.csv", stringsAsFactors=FAL
     resulting data frame has the same number of rows as `hol`).
   - Create a data frame that contains the information for the specimens
     identified with an invalid species name (content of the column `Status` is
-    not `NA`)? (hint: specimens identified only with a genus name shouldn't be
+    `NA`)? (hint: specimens identified only with a genus name shouldn't be
     included in this count.)
   - Select only the columns: `idigbio.uuid`, `dwc.genus`, `dwc.specificEpithet`,
     `dwc.institutionCode`, `dwc.catalogNumber` from this data frame and export
     the data as a CSV file (using the function `write.csv`) named
     `holothuriidae-invalid.csv`
 
-Once you are done, commit your script to your repository:
-Git icon > "Commit", check the box next to the file name for your script, add a
-message, click on the Commit button and then on the push button.
+Once you are done, commit your script to your repository: Git icon > "Commit",
+check the box next to the file name for your script, add a message, click on the
+Commit button and then on the "push" button.
 
-<!---
+### Answers
 
 
 ```r
@@ -222,5 +222,3 @@ hol_invalid <- subset(hol_combined, is.na(Status) & nzchar(dwc.specificEpithet))
 write.csv(hol_invalid[, c("idigbio.uuid", "dwc.genus", "dwc.specificEpithet", "dwc.institutionCode", "dwc.catalogNumber")],
           file="holothuriidae-invalid.csv", row.names=FALSE)
 ```
-
---->

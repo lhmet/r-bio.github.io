@@ -53,7 +53,7 @@ fork. The address of the repository will be:
 
 Go to the shell and add the upstream repo:
 
-```{shell}
+```
 git remote add upstream https://github.com/r-bio/intro-rmarkdown
 ```
 

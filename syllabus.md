@@ -95,11 +95,11 @@ Feburary 27 | Review and challenges        |  Project updates
 March 13    | markdown + Open Lab |
 March 20    | Open Lab | François out of town
 March 27    | Open Lab | François out of town
-April 3     | Open Lab | Package demonstration 1
+April 3     | Open Lab |
 April 6 (9:35-12:35) | Your first R package |
-April 10    | Open Lab | Package demonstration 2
-April 17    | Open Lab | Project presentations
-April 24    |          |
+April 10    | Open Lab | Package demonstration 1
+April 17    | Open Lab | Package demonstration 2
+April 24    | ---      | Project presentations
 
 ## Assessment and Grading
 

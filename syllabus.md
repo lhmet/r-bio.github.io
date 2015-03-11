@@ -84,21 +84,22 @@ dates, regular expressions, etc.)
 
 date        | Topic       | Other projects
 ------------|-------------|-----------------
-January 9?  | Software installation, organization of the class, how to use Github |
-January 16  | Lecture: Version control + Introduction to programming in R |
-January 23  | Open Lab    | Project pitches 1
-January 30  | Open Lab    | Project pitches 2
-February 6  | Lecture: Graphics in R + knitr and reproducibility | groups are formed
-February 13 | Open Lab         |  Project updates
-February 20 | Open Lab         |  Project updates
-Feburary 27 | Open Lab        |  Project updates
-March 13    | Lecture: Continuous, test-driven development + How to get data from the web? |
-March 20    | Open Lab | Package demonstration 1
-March 27    | Open Lab | Package demonstration 2
-April 3     | Open Lab | Package demonstration 3
-April 10    | Open Lab | Package demonstration 4
-April 17    | ---      | Project presentations
-
+January 9   | Software installation, organization of the class, how to use Github |
+January 16  | Introduction to programming in R |
+January 23  | Data frames part 1   | Project pitches 1
+January 30  | Data frames part 2   | Project pitches 2
+February 6  | Data frames part 3   | groups are formed
+February 13 | Flow and functions   |  Project updates
+February 20 | Advanced functions + Introduction to GitHub         |  Project updates
+Feburary 27 | Review and challenges        |  Project updates
+March 13    | markdown + Open Lab |
+March 20    | Open Lab | François out of town
+March 27    | Open Lab | François out of town
+April 3     | Open Lab | Package demonstration 1
+April 6 (9:35-12:35) | Your first R package |
+April 10    | Open Lab | Package demonstration 2
+April 17    | Open Lab | Project presentations
+April 24    |          |
 
 ## Assessment and Grading
 

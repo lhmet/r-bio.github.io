@@ -6,7 +6,7 @@ title: List of functions you should be familiar with
 This is inspired from/a subset of
 [Hadley Wickham's vocabulary](http://adv-r.had.co.nz/Vocabulary.html).
 
-```
+```r
 ?   # to get help
 str # structure of an object
 
@@ -80,7 +80,7 @@ sample
 ## coercion and tests
 is/as.(character, numeric, logical, factor, ...)
 
-# Character manipulation
+## Character manipulation
 grep, agrep
 gsub
 strsplit
@@ -90,20 +90,20 @@ tolower, toupper
 substr
 paste
 
-# Factors
+## Factors
 factor, levels, nlevels
 reorder, relevel
 cut, findInterval
 interaction
 
-# Output
+## Output
 print, cat
 message, warning
 dput
 format
 sink, capture.output
 
-# Reading and writing data
+## Reading and writing data
 data
 count.fields
 read.csv, write.csv
@@ -111,7 +111,7 @@ readLines, writeLines
 readRDS, saveRDS
 load, save
 
-# Output
+## Output
 print, cat
 message, warning, stop
 dput

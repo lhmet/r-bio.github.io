@@ -7,9 +7,6 @@ To make things easier, I created a cleaned up version of the surveys dataset
 that we will use.
 
 
-```r
-knitr::opts_chunk$set(results='hide', fig.path='img/ggplot2-')
-```
 
 
 ```r
@@ -239,11 +236,7 @@ ggplot(subset(surveys_complete, species_id %in% c("DO", "DM", "DS") & sex %in% c
 
 ```r
 ggplot(surveys_complete, aes(species_id)) + geom_bar() #aes(stat = "identity"))
-```
 
-![plot of chunk unnamed-chunk-19](img/ggplot2-unnamed-chunk-19-1.png) 
-
-```r
 surveys_weights <- with(surveys_complete, tapply(weight, species_id, mean))
 surveys_weights <- data.frame(species_id = levels(surveys_complete$species_id),
                               weight = surveys_weights)
@@ -251,7 +244,7 @@ surveys_weights <- surveys_weights[complete.cases(surveys_weights),  ]
 ggplot(surveys_weights, aes(x = species_id, y = weight)) + geom_bar(stat = "identity")
 ```
 
-![plot of chunk unnamed-chunk-19](img/ggplot2-unnamed-chunk-19-2.png) 
+![plot of chunk unnamed-chunk-19](img/ggplot2-unnamed-chunk-19-1.png) 
 
 > ### Challenge
 >

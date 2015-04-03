@@ -6,8 +6,9 @@ title: 07 -- Graphics with ggplot2
 To make things easier, I created a cleaned up version of the surveys dataset
 that we will use.
 
-```{r}
-knitr::opts_chunk$set(results='hide', fig.path='img/ggplot2-')
+```{r, echo=FALSE}
+knitr::opts_chunk$set(results='hide', fig.path='img/ggplot2-', warnings = FALSE,
+                      fig.keep = 'last')
 ```
 
 ```{r, eval=FALSE}
@@ -171,7 +172,7 @@ ggplot(subset(surveys_complete, species_id %in% c("DO", "DM", "DS") & sex %in% c
 ## barplot
 
 ```{r}
-ggplot(surveys_complete, aes(species_id)) + geom_bar() #aes(stat = "identity"))
+ggplot(surveys_complete, aes(species_id)) + geom_bar()
 
 surveys_weights <- with(surveys_complete, tapply(weight, species_id, mean))
 surveys_weights <- data.frame(species_id = levels(surveys_complete$species_id),

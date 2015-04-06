@@ -7,7 +7,7 @@ To make things easier, I created a cleaned up version of the surveys dataset
 that we will use.
 
 ```{r, echo=FALSE}
-knitr::opts_chunk$set(results='hide', fig.path='img/ggplot2-', warnings = FALSE,
+knitr::opts_chunk$set(results='hide', fig.path='../img/ggplot2-', warnings = FALSE,
                       fig.keep = 'last')
 ```
 
@@ -184,3 +184,11 @@ ggplot(surveys_weights, aes(x = species_id, y = weight)) + geom_bar(stat = "iden
 > ### Challenge
 >
 > Repeat the same thing on the hindfoot length instead of the weight
+
+## Resources for going further
+
+* The ggplot2 documentation:
+[http://docs.ggplot2.org/](http://docs.ggplot2.org/)
+* The R cookbook website:
+[http://www.cookbook-r.com/](http://www.cookbook-r.com/)
+* customizing the aspect of your plots with themes: [http://docs.ggplot2.org/dev/vignettes/themes.html](http://docs.ggplot2.org/dev/vignettes/themes.html)

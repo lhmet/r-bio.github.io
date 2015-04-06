@@ -160,8 +160,10 @@ inside your `data_output` folder.
 
 We are now ready to write our paper about the sea cucumber fauna of the Red Sea.
 
-Also make sure that you have the following packages installed:
+Make sure that you have the following packages installed:
 
 1. ggplot2
 1. maps
 1. knitr
+
+and open the file `paper.Rmd`

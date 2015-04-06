@@ -9,6 +9,8 @@ that we will use.
 ```{r, echo=FALSE}
 knitr::opts_chunk$set(results='hide', fig.path='../img/ggplot2-', warnings = FALSE,
                       fig.keep = 'last')
+library(ggplot2)
+surveys_complete <- read.csv(file = "data/surveys_complete.csv")
 ```
 
 ```{r, eval=FALSE}
@@ -41,7 +43,6 @@ To build a ggplot we need to:
 - bind plot to a specific data frame
 
 ```{r, eval=FALSE}
-library(ggplot2)
 ggplot(surveys_complete)
 ```
 

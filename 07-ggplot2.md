@@ -40,7 +40,6 @@ To build a ggplot we need to:
 
 
 ```r
-library(ggplot2)
 ggplot(surveys_complete)
 ```
 
@@ -53,7 +52,7 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length))
 ```
 
 ```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
+## Error: No layers in plot
 ```
 
 - add `geoms` -- graphical representation of the data in the plot (points,
@@ -65,9 +64,7 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length)) +
   geom_point()
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-5](../img/ggplot2-unnamed-chunk-5-1.png) 
 
 We can reduce over-plotting by adding some jitter:
 
@@ -77,9 +74,7 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length)) +
   geom_point(position = position_jitter())
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-6](../img/ggplot2-unnamed-chunk-6-1.png) 
 
 We can add additional aesthetic values according to other properties from our
 dataset. For instance, if we want to color points differently depending on the
@@ -91,9 +86,7 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length, colour = species_i
   geom_point(position = position_jitter())
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-7](../img/ggplot2-unnamed-chunk-7-1.png) 
 
 We can also change the transparency
 
@@ -103,9 +96,7 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length, colour = species_i
   geom_point(alpha = 0.3,  position = position_jitter())
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-8](../img/ggplot2-unnamed-chunk-8-1.png) 
 
 Just like we did for the species_id and the colors, we can do the same with
 using different shapes for
@@ -117,8 +108,22 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length, colour = species_i
 ```
 
 ```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
+## Warning: The shape palette can deal with a maximum of 6 discrete values
+## because more than 6 becomes difficult to discriminate; you have
+## 24. Consider specifying shapes manually. if you must have them.
 ```
+
+```
+## Warning: Removed 21084 rows containing missing values (geom_point).
+```
+
+```
+## Warning: The shape palette can deal with a maximum of 6 discrete values
+## because more than 6 becomes difficult to discriminate; you have
+## 24. Consider specifying shapes manually. if you must have them.
+```
+
+![plot of chunk unnamed-chunk-9](../img/ggplot2-unnamed-chunk-9-1.png) 
 
 ggplot2 also allows you to calculate directly some statistical
 
@@ -129,9 +134,7 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length, colour = species_i
   geom_point(alpha = 0.3,  position = position_jitter()) + stat_smooth(method = "lm")
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-10](../img/ggplot2-unnamed-chunk-10-1.png) 
 
 
 ```r
@@ -139,9 +142,7 @@ ggplot(subset(surveys_complete,  species_id == "DS"), aes(x = weight, y = hindfo
   geom_point(alpha = 0.3,  position = position_jitter()) + stat_smooth(method = "lm")
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-11](../img/ggplot2-unnamed-chunk-11-1.png) 
 
 
 ```r
@@ -151,9 +152,7 @@ ggplot(subset(surveys_complete, species_id == "DS"),
   ylim(c(0, 60))
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-12](../img/ggplot2-unnamed-chunk-12-1.png) 
 
 
 ```r
@@ -164,9 +163,7 @@ ggplot(surveys_complete,
   coord_cartesian(ylim = c(40, 60))
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-13](../img/ggplot2-unnamed-chunk-13-1.png) 
 
 
 ```r
@@ -175,9 +172,7 @@ ggplot(surveys_complete, aes(x = weight, y = hindfoot_length, colour = species_i
   theme_bw()
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-14](../img/ggplot2-unnamed-chunk-14-1.png) 
 
 ## Boxplot
 
@@ -189,9 +184,7 @@ ggplot(surveys_complete, aes(x = species_id, y = weight)) +
   geom_boxplot()
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-15](../img/ggplot2-unnamed-chunk-15-1.png) 
 
 By adding points to boxplot, we can see particular measurements and the
 abundance of measurements.
@@ -203,9 +196,7 @@ ggplot(surveys_complete, aes(species_id, weight)) +
   geom_boxplot(alpha=0) + coord_flip()
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-16](../img/ggplot2-unnamed-chunk-16-1.png) 
 
 > ### Challenge
 >
@@ -222,9 +213,7 @@ ggplot(surveys_complete, aes(species_id, weight)) +
   geom_boxplot(alpha=0) + coord_flip() + facet_wrap( ~ sex)
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-17](../img/ggplot2-unnamed-chunk-17-1.png) 
 
 > ### Challenge
 >
@@ -240,53 +229,22 @@ ggplot(subset(surveys_complete, species_id %in% c("DO", "DM", "DS") & sex %in% c
        geom_boxplot(alpha = 0, colour = "black")
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-18](../img/ggplot2-unnamed-chunk-18-1.png) 
 
 ## barplot
 
 
 ```r
 ggplot(surveys_complete, aes(species_id)) + geom_bar()
-```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
-
-```r
 surveys_weights <- with(surveys_complete, tapply(weight, species_id, mean))
-```
-
-```
-## Error in with(surveys_complete, tapply(weight, species_id, mean)): object 'surveys_complete' not found
-```
-
-```r
 surveys_weights <- data.frame(species_id = levels(surveys_complete$species_id),
                               weight = surveys_weights)
-```
-
-```
-## Error in levels(surveys_complete$species_id): object 'surveys_complete' not found
-```
-
-```r
 surveys_weights <- surveys_weights[complete.cases(surveys_weights),  ]
-```
-
-```
-## Error in eval(expr, envir, enclos): object 'surveys_weights' not found
-```
-
-```r
 ggplot(surveys_weights, aes(x = species_id, y = weight)) + geom_bar(stat = "identity")
 ```
 
-```
-## Error in eval(expr, envir, enclos): could not find function "ggplot"
-```
+![plot of chunk unnamed-chunk-19](../img/ggplot2-unnamed-chunk-19-1.png) 
 
 > ### Challenge
 >

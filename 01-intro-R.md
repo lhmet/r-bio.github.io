@@ -4,7 +4,7 @@ title: 01 -- First lecture
 time: 2.5 hours
 ---
 
-# Preambule
+# Preamble
 
 This first lecture is divided in 3 parts.
 

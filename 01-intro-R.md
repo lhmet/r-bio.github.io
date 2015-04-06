@@ -497,4 +497,7 @@ fav_colors == "blue"
 fav_colors[fav_colors == "blue"]
 which(fav_colors == "blue")
 names(fav_colors)[which(fav_colors == "blue")]
+fav_colors == "green" | fav_colors == "blue" | fav_colors == "yellow"
+fav_colors %in% c("green", "blue", "yellow")
+fav_colors[fav_colors %in% c("green", "blue", "yellow")]
 ```

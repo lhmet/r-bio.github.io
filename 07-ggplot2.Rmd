@@ -41,6 +41,7 @@ To build a ggplot we need to:
 - bind plot to a specific data frame
 
 ```{r, eval=FALSE}
+library(ggplot2)
 ggplot(surveys_complete)
 ```
 

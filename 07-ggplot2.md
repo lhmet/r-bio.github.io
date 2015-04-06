@@ -40,6 +40,7 @@ To build a ggplot we need to:
 
 
 ```r
+library(ggplot2)
 ggplot(surveys_complete)
 ```
 

@@ -165,7 +165,8 @@ sum(str_detect(hol$dwc.scientificName, ignore.case("holothuria")))
 
 
 ```r
-authors <- hol$dwc.scientificNameAuthorship %>% str_replace(pattern = "å", replacement = "aa") %>%
+authors <- hol$dwc.scientificNameAuthorship %>%
+  str_replace(pattern = "å", replacement = "aa") %>%
   str_replace(pattern = "ä", replacement = "ae") %>%
   str_replace(pattern = "é", "e") %>%
   str_replace("^HL", "Hubert Lyman") %>%
@@ -173,5 +174,31 @@ authors <- hol$dwc.scientificNameAuthorship %>% str_replace(pattern = "å", repl
   str_split("&") %>% unlist() %>%
   str_split(", ") %>% unlist() %>%
     str_extract("[[:alpha:]]+(.+[[:alpha:]])?") %>%
-  unique() %>% sort()
+    unique() %>% sort()
 ```
+
+```
+## Error in eval(expr, envir, enclos): could not find function "%>%"
+```
+
+```r
+authors
+```
+
+```
+## Error in eval(expr, envir, enclos): object 'authors' not found
+```
+
+<!--- TODO: This lesson lacks a basic intro to regular expressions -->
+
+## To learn more about string manipulations and regular expressions
+
+* the package `stringr` has a good
+  [vignette](https://github.com/hadley/stringr/blob/master/vignettes/stringr.Rmd)
+  (on which this lecture is based)
+* the package [`rex`](http://cran.r-project.org/web/packages/rex/index.html)
+provides an easier way of writing regular expressions.
+* This [website](http://www.regular-expressions.info/index.html) provides
+reference and tutorials for regular expressions.
+* This [tool](http://regexr.com/) allows you to check what your regular
+expression will match on text you provide

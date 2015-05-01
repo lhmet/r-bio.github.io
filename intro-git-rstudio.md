@@ -211,9 +211,12 @@ branches" in the "Git" menu of your R project in RStudio.
 
 ## Exploring further
 
-There are many resources on the web to learn about Git and GitHub. An excellent
-(but maybe too comprehensive for beginners) is the
+There are many resources on the web to learn about Git and GitHub:
+
+- Git Tower provides a nice infographics that illustrates how the differents
+  parts of the Git workflow fit
+  together. [Git workflow](http://www.git-tower.com/blog/workflow-of-version-control)
+- An excellent (but maybe too comprehensive for beginners) is the
 [Pro Git Book](http://git-scm.com/book/en/v2). This chapter is great to learn
-how to use
-[GitHub](http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) to
+how to use [GitHub](http://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project) to
 contribute to a project.

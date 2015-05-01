@@ -91,6 +91,9 @@ track of what you are doing. Don't do this:
 
 ![](http://imgs.xkcd.com/comics/git_commit.png) (From xkcd.com)
 
+<!-- here I need to provide a more detailed explanation of the workflow before -->
+<!-- covering how to do pull requests -->
+
 ## Branching
 
 Branching is a great feature of version control. It allows you to duplicate your

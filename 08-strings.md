@@ -160,11 +160,16 @@ sum(str_detect(hol$dwc.scientificName, ignore.case("holothuria")))
 ```
 
 ```
+## Please use (fixed|coll|regexp)(x, ignore_case = TRUE) instead of ignore.case(x)
+```
+
+```
 ## [1] 2899
 ```
 
 
 ```r
+library(dplyr)
 authors <- hol$dwc.scientificNameAuthorship %>%
   str_replace(pattern = "å", replacement = "aa") %>%
   str_replace(pattern = "ä", replacement = "ae") %>%
@@ -175,18 +180,25 @@ authors <- hol$dwc.scientificNameAuthorship %>%
   str_split(", ") %>% unlist() %>%
     str_extract("[[:alpha:]]+(.+[[:alpha:]])?") %>%
     unique() %>% sort()
-```
-
-```
-## Error in eval(expr, envir, enclos): could not find function "%>%"
-```
-
-```r
 authors
 ```
 
 ```
-## Error in eval(expr, envir, enclos): object 'authors' not found
+##  [1] "Augustin"           "Bell"               "Brandt"            
+##  [4] "Caso"               "Caycedo"            "Cherbonnier"       
+##  [7] "Chiaje"             "Clark"              "Deichmann"         
+## [10] "Delle Chiaje"       "Domantay"           "Erwe"              
+## [13] "Feral"              "Fisher"             "Forskaal"          
+## [16] "Gaimard"            "Gmelin"             "Hubert Lyman Clark"
+## [19] "Jaeger"             "Kerr"               "Laguarda-Figueras" 
+## [22] "Lampert"            "Lesson"             "Linnaeus"          
+## [25] "Ludwig"             "Marenzeller"        "Massin"            
+## [28] "Miller"             "Mitsukuri"          "Pawson"            
+## [31] "Pourtales"          "Pourtalès"          "Purcell"           
+## [34] "Quoy"               "Rowe"               "Samyn"             
+## [37] "Selenka"            "Semper"             "Sluiter"           
+## [40] "Solís-Marín"        "Tan Tiu"            "Theel"             
+## [43] "Tomascik"           "Uthicke"            "von Marenzeller"
 ```
 
 <!--- TODO: This lesson lacks a basic intro to regular expressions -->

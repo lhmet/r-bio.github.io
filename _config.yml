@@ -1,6 +1,5 @@
 # Dependencies
 markdown:            kramdown
-highlighter:         pygments
 
 redcarpet:
   extensions: ["tables", "fenced_code_block"]
@@ -9,7 +8,6 @@ redcarpet:
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: true
 
 exclude:      ["*.Rmd"]
 
